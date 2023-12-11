@@ -1,6 +1,7 @@
 import { Button, Stack, Typography } from "@mui/material";
 import { StarRate } from "@mui/icons-material";
 import React from "react";
+import HeaderComponents from "./headerComponents";
 type MaterialUIColor =
   | "inherit"
   | "primary"
@@ -83,19 +84,7 @@ const ButtonC = () => {
   const disabledSet = [false, false, false, false, false, false, true];
   return (
     <>
-      <Stack
-        width={"873px"}
-        justifyContent={"space-between"}
-        flexDirection={"row"}
-        bgcolor={"grey.100"}
-        alignItems={"center"}
-        p={1}
-      >
-        <Typography variant="h6">Button</Typography>
-        <Button variant="outlined" color="primary">
-          Docs
-        </Button>
-      </Stack>
+      <HeaderComponents title="Button" />
       <Stack gap={4} alignItems={"center"}>
         <ButtonSet
           variantType="contained"

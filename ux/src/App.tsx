@@ -3,17 +3,18 @@ import AutocompleteC from "./components/Autocomplete";
 import Header from "./header/Header";
 import Menu from "./menu/Menu";
 import ButtonC from "./components/Button";
-function App() {
+import Route from "./route/route";
+import { useState } from "react";
+
+const App = () => {
+  const [routerPage, setrouterPage] = useState<string>("menu");
+
   return (
-    <div>
-      <Menu />
-      <Header />
-      <Stack ml={"240px"} alignItems={"center"} paddingTop={"36px"} gap={4}>
-        <AutocompleteC />
-        <ButtonC />
-      </Stack>
-    </div>
+    <>
+      <Menu setrouterPage={setrouterPage} />
+      <Route routerPage={routerPage} setrouterPage={setrouterPage} />
+    </>
   );
-}
+};
 
 export default App;

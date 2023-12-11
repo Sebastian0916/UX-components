@@ -6,23 +6,12 @@ import {
   Typography,
 } from "@mui/material";
 import React from "react";
+import HeaderComponents from "./headerComponents";
 
 const AutocompleteC = () => {
   return (
     <>
-      <Stack
-        width={"873px"}
-        justifyContent={"space-between"}
-        flexDirection={"row"}
-        bgcolor={"grey.100"}
-        alignItems={"center"}
-        p={1}
-      >
-        <Typography variant="h6">Autocomplete</Typography>
-        <Button variant="outlined" color="primary">
-          Docs
-        </Button>
-      </Stack>
+      <HeaderComponents title="Autocomplete" />
       <Stack gap={4} flexDirection={"row"}>
         <Stack gap={1.5}>
           <Typography variant="caption" color="text.secondary">
