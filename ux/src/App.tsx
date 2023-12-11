@@ -2,25 +2,19 @@ import { Stack } from "@mui/material";
 import AutocompleteC from "./components/Autocomplete";
 import Header from "./header/Header";
 import Menu from "./menu/Menu";
-import { ButtonGroup } from "./components/ButtonGroup";
-import { IconButton } from "./components/IconButton";
+import ButtonC from "./components/Button";
+import Route from "./route/route";
+import { useState } from "react";
 
-function App() {
+const App = () => {
+  const [routerPage, setrouterPage] = useState<string>("menu");
+
   return (
-    <div>
-      <Menu />
-      <Header />
-      <Stack
-        ml={"240px"}
-        alignItems={"center"}
-        paddingTop={"36px"}
-      >
-        <AutocompleteC />
-        <IconButton />
-        <ButtonGroup />
-      </Stack>
-    </div>
+    <>
+      <Menu setrouterPage={setrouterPage} />
+      <Route routerPage={routerPage} setrouterPage={setrouterPage} />
+    </>
   );
-}
+};
 
 export default App;

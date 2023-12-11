@@ -6,24 +6,13 @@ import {
   Typography,
 } from "@mui/material";
 import React from "react";
+import HeaderComponents from "./headerComponents";
 
 const AutocompleteC = () => {
   return (
     <>
-      <Stack
-        width={"873px"}
-        justifyContent={"space-between"}
-        flexDirection={"row"}
-        bgcolor={"grey.100"}
-        alignItems={"center"}
-        p={1}
-      >
-        <Typography variant="h6">Autocomplete</Typography>
-        <Button variant="outlined" color="primary">
-          Docs
-        </Button>
-      </Stack>
-      <Stack gap={4} mt={4} flexDirection={"row"}>
+      <HeaderComponents title="Autocomplete" />
+      <Stack gap={4} flexDirection={"row"}>
         <Stack gap={1.5}>
           <Typography variant="caption" color="text.secondary">
             Autocomplete | simple
@@ -32,7 +21,7 @@ const AutocompleteC = () => {
             disablePortal
             id="combo-box-demo"
             options={top100Films}
-            sx={{ width: 350 }}
+            sx={{ width: 420 }}
             renderInput={(params) => (
               <TextField {...params} label="Movie" size="medium" />
             )}
@@ -41,7 +30,7 @@ const AutocompleteC = () => {
             disablePortal
             id="combo-box-demo"
             options={top100Films}
-            sx={{ width: 350 }}
+            sx={{ width: 420 }}
             renderInput={(params) => <TextField {...params} label="Movie" />}
           />
         </Stack>
@@ -52,7 +41,7 @@ const AutocompleteC = () => {
           <Autocomplete
             multiple
             size="medium"
-            sx={{ width: 350 }}
+            sx={{ width: 420 }}
             id="tags-outlined"
             options={top100Films}
             getOptionLabel={(option) => option.label}
@@ -69,7 +58,7 @@ const AutocompleteC = () => {
           />
           <Autocomplete
             multiple
-            sx={{ width: 350 }}
+            sx={{ width: 420 }}
             id="tags-outlined"
             options={top100Films}
             getOptionLabel={(option) => option.label}

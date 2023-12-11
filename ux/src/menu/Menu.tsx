@@ -7,8 +7,13 @@ import {
   Typography,
 } from "@mui/material";
 import { SincoTheme } from "@sinco/react";
+import Route from "../route/route";
+import React, { useState } from "react";
+interface MenuProps {
+  setrouterPage: React.Dispatch<React.SetStateAction<string>>;
+}
 
-const Menu = () => {
+const Menu: React.FC<MenuProps> = ({ setrouterPage }) => {
   return (
     <>
       <Paper
@@ -36,25 +41,25 @@ const Menu = () => {
             </ListItemText>
           </MenuItem>
           <Divider />
-          <MenuItem>
+          <MenuItem onClick={() => setrouterPage("autocomplete")}>
             <ListItemText>
               <Typography variant="body2">Autocomplete</Typography>
             </ListItemText>
           </MenuItem>
           <Divider />
-          <MenuItem>
+          <MenuItem onClick={() => setrouterPage("button")}>
             <ListItemText>
               <Typography variant="body2">Button</Typography>
             </ListItemText>
           </MenuItem>
           <Divider />
-          <MenuItem>
+          <MenuItem onClick={() => setrouterPage("icon")}>
             <ListItemText>
               <Typography variant="body2">Icon Button</Typography>
             </ListItemText>
           </MenuItem>
           <Divider />
-          <MenuItem>
+          <MenuItem onClick={() => setrouterPage("fab")}>
             <ListItemText>
               <Typography variant="body2">Floating Action Button</Typography>
             </ListItemText>
