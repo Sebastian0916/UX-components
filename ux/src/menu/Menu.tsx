@@ -77,7 +77,7 @@ const Menu: React.FC<MenuProps> = ({ setrouterPage }) => {
             </ListItemText>
           </MenuItem>
           <Divider />
-          <MenuItem>
+          <MenuItem onClick={() => setrouterPage("Radio")}>
             <ListItemText>
               <Typography variant="body2">Radio - Radio Group</Typography>
             </ListItemText>

@@ -5,6 +5,7 @@ import AutocompleteC from "../components/Autocomplete";
 import { Stack } from "@mui/material";
 import ButtonC from "../components/Button";
 import FabC from "../components/Fab";
+import { Radio } from "../components/RadioGroup";
 
 interface RouteProps {
   routerPage: string;
@@ -20,6 +21,7 @@ const Route: React.FC<RouteProps> = ({ routerPage, setrouterPage }) => {
         {routerPage === "autocomplete" && <AutocompleteC />}
         {routerPage === "button" && <ButtonC />}
         {routerPage === "fab" && <FabC />}
+        {routerPage === "Radio" && <Radio />}
       </Stack>
     </div>
   );
