@@ -28,15 +28,15 @@ const ButtonSet: React.FC<ButtonSetProps> = ({
   disabledSet,
 }) => {
   const renderButtons = () => {
-    return colorSet.map((color, index) => (
+    return colorSet.map((color, i) => (
       <Button
-        key={index}
+        key={i}
         startIcon={startIcon}
         endIcon={endIcon}
         color={color}
         variant={variantType}
-        size={sizeSet[index]}
-        disabled={disabledSet[index]}
+        size={sizeSet[i]}
+        disabled={disabledSet[i]}
       >
         {color.charAt(0).toUpperCase() + color.slice(1)}
       </Button>
@@ -61,7 +61,7 @@ const ButtonSet: React.FC<ButtonSetProps> = ({
     </Stack>
   );
 };
-const ButtonC = () => {
+const ButtonComponent = () => {
   const colorSet: MaterialUIColor[] = [
     "primary",
     "secondary",
@@ -133,4 +133,4 @@ const ButtonC = () => {
   );
 };
 
-export default ButtonC;
+export {ButtonComponent as Button};

@@ -21,8 +21,8 @@ const FabWraps = ({
   disabled,
 }: {
   size: sizeFab;
-  title: string;
-  variant?: variantFab;
+  title?: string;
+  variant: variantFab;
   color?: colorFab;
   disabled?: boolean;
 }) => {
@@ -33,7 +33,7 @@ const FabWraps = ({
     </Fab>
   );
 };
-const FabC = () => {
+const FabComponent = () => {
   return (
     <Stack width={871} gap={4}>
       <HeaderComponents title="Fab" />
@@ -80,8 +80,26 @@ const FabC = () => {
           />
         </Stack>
       </Stack>
+      <Stack gap={1}>
+        <Stack alignItems={"flex-start"}>
+          <Typography color={"text.secondary"} variant="caption">
+            Floating Action Button | circular | Size: Large | Medium | Small
+          </Typography>
+        </Stack>
+        <Stack
+          flexDirection={"row"}
+          justifyContent={"space-between"}
+          alignItems={"center"}
+        >
+          <FabWraps size="large" color="success" variant="circular" />
+          <FabWraps size="large" variant="circular" color="error" />
+          <FabWraps size="medium" variant="circular" color="warning" />
+          <FabWraps size="medium" color="inherit" variant="circular" />
+          <FabWraps size="small" variant="circular" disabled={true} />
+        </Stack>
+      </Stack>
     </Stack>
   );
 };
 
-export default FabC;
+export { FabComponent as Fab };

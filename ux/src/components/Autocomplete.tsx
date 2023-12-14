@@ -1,6 +1,5 @@
 import {
   Autocomplete,
-  Button,
   Stack,
   TextField,
   Typography,
@@ -8,7 +7,7 @@ import {
 import React from "react";
 import HeaderComponents from "./headerComponents";
 
-const AutocompleteC = () => {
+const AutocompleteComponent = () => {
   return (
     <>
       <HeaderComponents title="Autocomplete" />
@@ -204,4 +203,4 @@ const top100Films = [
   { label: "3 Idiots", year: 2009 },
   { label: "Monty Python and the Holy Grail", year: 1975 },
 ];
-export default AutocompleteC;
+export { AutocompleteComponent as Autocomplete };
