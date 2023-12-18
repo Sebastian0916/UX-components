@@ -14,6 +14,7 @@ const SelectComponent = () => {
     };
 
     return (
+        <>
         <Stack gap={1}>
             <HeaderComponents title="Select" />
             <Stack display="flex" gap={4}>
@@ -71,6 +72,7 @@ const SelectComponent = () => {
 
             </Stack>
         </Stack>
+        </>
     )
 }
 export { SelectComponent as Select };

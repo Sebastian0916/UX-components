@@ -1,0 +1,113 @@
+[
+  {
+    "title": "COMPONENTES"
+  },
+  {
+    "label": "Autocomplete"
+  },
+  {
+    "label": "Button"
+  },
+  {
+    "label": "Icon Button"
+  },
+  {
+    "label": "Floating Action Button"
+  },
+  {
+    "label": "Button group"
+  },
+  {
+    "label": "Checkbox"
+  },
+  {
+    "label": "Radio - Radio Group"
+  },
+  {
+    "label": "Rating"
+  },
+  {
+    "label": "Select"
+  },
+  {
+    "label": "Slider"
+  },
+  {
+    "label": "Switch FormControl"
+  },
+  {
+    "label": "Switch"
+  },
+  {
+    "label": "Badge"
+  },
+  {
+    "label": "Text Field"
+  },
+  {
+    "label": "Toggle Button"
+  },
+  {
+    "label": "Avatar"
+  },
+  {
+    "label": "Icon"
+  },
+  {
+    "label": "List"
+  },
+  {
+    "label": "Tooltip"
+  },
+  {
+    "label": "Alert"
+  },
+  {
+    "label": "Table"
+  },
+  {
+    "label": "Accordion"
+  },
+  {
+    "label": "Card"
+  },
+  {
+    "label": "Menu"
+  },
+  {
+    "label": "Pagination"
+  },
+  {
+    "label": "Speed Dial"
+  },
+  {
+    "label": "Stepper"
+  },
+  {
+    "label": "Dialog"
+  },
+  {
+    "label": "Tab"
+  },
+  {
+    "label": "DataGrid MUI X PRO"
+  },
+  {
+    "label": "Popper | Poppover"
+  },
+  {
+    "label": "Empty State"
+  },
+  {
+    "label": "Toastnotification"
+  },
+  {
+    "label": "Footer actions"
+  },
+  {
+    "label": "PageHeader"
+  },
+  {
+    "label": "Modal"
+  }
+]

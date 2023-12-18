@@ -1,18 +1,19 @@
+import React from "react";
+import { Link } from "react-router-dom"; // Importa Link de React Router
 import {
   Divider,
-  ListItemText,
   MenuItem,
   MenuList,
   Paper,
-  Typography,
+  Stack,
 } from "@mui/material";
 import { SincoTheme } from "@sinco/react";
-import React, { useState } from "react";
+import menuData from "../data/menuData.json";
 interface MenuProps {
   setrouterPage: React.Dispatch<React.SetStateAction<string>>;
 }
 
-const Menu: React.FC<MenuProps> = ({ setrouterPage }) => {
+const Menu = () => {
   return (
     <>
       <Paper
@@ -26,146 +27,21 @@ const Menu: React.FC<MenuProps> = ({ setrouterPage }) => {
         }}
       >
         <MenuList dense={false}>
-          <MenuItem
-            sx={{
-              backgroundColor: SincoTheme.palette.primary[50],
-              position: "sticky",
-              height: 46,
-              zIndex: 2,
-              top: 0,
-            }}
-          >
-            <ListItemText>
-              <Typography variant="subtitle2">COMPONENTES</Typography>
-            </ListItemText>
-          </MenuItem>
-          <Divider />
-          <MenuItem onClick={() => setrouterPage("autocomplete")}>
-            <ListItemText>
-              <Typography variant="body2">Autocomplete</Typography>
-            </ListItemText>
-          </MenuItem>
-          <Divider />
-          <MenuItem onClick={() => setrouterPage("button")}>
-            <ListItemText>
-              <Typography variant="body2">Button</Typography>
-            </ListItemText>
-          </MenuItem>
-          <Divider />
-          <MenuItem onClick={() => setrouterPage("icon")}>
-            <ListItemText>
-              <Typography variant="body2">Icon Button</Typography>
-            </ListItemText>
-          </MenuItem>
-          <Divider />
-          <MenuItem onClick={() => setrouterPage("fab")}>
-            <ListItemText>
-              <Typography variant="body2">Floating Action Button</Typography>
-            </ListItemText>
-          </MenuItem>
-          <Divider />
-          <MenuItem>
-            <ListItemText>
-              <Typography variant="body2">Button group</Typography>
-            </ListItemText>
-          </MenuItem>
-          <Divider />
-          <MenuItem>
-            <ListItemText>
-              <Typography variant="body2">Checkbox</Typography>
-            </ListItemText>
-          </MenuItem>
-          <Divider />
-          <MenuItem onClick={() => setrouterPage("Radio")}>
-            <ListItemText>
-              <Typography variant="body2">Radio - Radio Group</Typography>
-            </ListItemText>
-          </MenuItem>
-          <Divider />
-          <MenuItem>
-            <ListItemText>
-              <Typography variant="body2">Raing</Typography>
-            </ListItemText>
-          </MenuItem>
-          <Divider />
-          <MenuItem onClick={() => setrouterPage("Select")}>
-            <ListItemText>
-              <Typography variant="body2" >Select</Typography>
-            </ListItemText>
-          </MenuItem>
-          <Divider />
-          <MenuItem>
-            <ListItemText>
-              <Typography variant="body2">Slider</Typography>
-            </ListItemText>
-          </MenuItem>
-          <Divider />
-          <MenuItem>
-            <ListItemText>
-              <Typography variant="body2">Switch</Typography>
-            </ListItemText>
-          </MenuItem>
-          <Divider />
-          <MenuItem>
-            <ListItemText>
-              <Typography variant="body2">Text Field</Typography>
-            </ListItemText>
-          </MenuItem>
-          <Divider />
-          <MenuItem>
-            <ListItemText>
-              <Typography variant="body2">Toggle Button</Typography>
-            </ListItemText>
-          </MenuItem>
-          <Divider />
-          <MenuItem>
-            <ListItemText>
-              <Typography variant="body2">Avatar</Typography>
-            </ListItemText>
-          </MenuItem>
-          <Divider />
-          <MenuItem>
-            <ListItemText>
-              <Typography variant="body2">Icon</Typography>
-            </ListItemText>
-          </MenuItem>
-          <Divider />
-          <MenuItem>
-            <ListItemText>
-              <Typography variant="body2">List</Typography>
-            </ListItemText>
-          </MenuItem>
-          <Divider />
-          <MenuItem>
-            <ListItemText>
-              <Typography variant="body2">Tooltip</Typography>
-            </ListItemText>
-          </MenuItem>
-          <Divider />
-          <MenuItem>
-            <ListItemText>
-              <Typography variant="body2">Alert</Typography>
-            </ListItemText>
-          </MenuItem>
-          <Divider />
-          <MenuItem>
-            <ListItemText>
-              <Typography variant="body2">Table</Typography>
-            </ListItemText>
-          </MenuItem>
-          <Divider />
-          <MenuItem>
-            <ListItemText>
-              <Typography variant="body2">Accordion</Typography>
-            </ListItemText>
-          </MenuItem>
-          <Divider />
-          <MenuItem>
-            <ListItemText>
-              <Typography variant="body2">Card</Typography>
-            </ListItemText>
-          </MenuItem>
-          <Divider />
+          {menuData.map((item, index) => (
+            <Stack key={index}>
+              {item.label && (
+                <>
+                  <MenuItem
+                    component={Link}
+                    to={`/${item.label.replace(/\s+/g, "")}`}
+                  >
+                    {item.label}
+                  </MenuItem>
+                  <Divider />
+                </>
+              )}
+            </Stack>
+          ))}
         </MenuList>
       </Paper>
     </>
