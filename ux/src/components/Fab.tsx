@@ -35,9 +35,15 @@ const FabWraps = ({
 };
 const FabComponent = () => {
   return (
-    <Stack width={871} gap={4}>
+    <Stack
+      alignItems={"center"}
+      ml={"240px"}
+      justifyContent={"center"}
+      mt={4}
+      spacing={4}
+    >
       <HeaderComponents title="Fab" />
-      <Stack gap={1}>
+      <Stack gap={1} width={"873px"}>
         <Stack alignItems={"flex-start"}>
           <Typography color={"text.secondary"} variant="caption">
             Floating Action Button | Extended | Size: Large | Medium | Small
@@ -80,7 +86,7 @@ const FabComponent = () => {
           />
         </Stack>
       </Stack>
-      <Stack gap={1}>
+      <Stack gap={1} width={"873px"}>
         <Stack alignItems={"flex-start"}>
           <Typography color={"text.secondary"} variant="caption">
             Floating Action Button | circular | Size: Large | Medium | Small

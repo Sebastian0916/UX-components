@@ -4,9 +4,15 @@ import { Rating, Stack, Typography } from "@mui/material";
 
 const RatingComponent = () => {
   return (
-    <Stack gap={4}>
+    <Stack
+      alignItems={"center"}
+      ml={"240px"}
+      justifyContent={"center"}
+      mt={4}
+      spacing={4}
+    >
       <HeaderComponents title="Rating" />
-      <Stack gap={1}>
+      <Stack gap={1} width={"873px"}>
         <Typography variant="caption" color="text.secondary">
           Rating | Size: Large | Medium | Small
         </Typography>

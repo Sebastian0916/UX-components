@@ -4,7 +4,13 @@ import HeaderComponents from "./headerComponents";
 
 const SwitchComponent = () => {
   return (
-    <Stack mt={4}>
+    <Stack
+      alignItems={"center"}
+      ml={"240px"}
+      justifyContent={"center"}
+      mt={4}
+      spacing={4}
+    >
       <HeaderComponents title="Switch" />
       <Stack gap={2} mt={4}>
         <Typography variant="caption" color="text.secondary">
@@ -13,6 +19,7 @@ const SwitchComponent = () => {
         <Stack
           justifyContent={"space-between"}
           alignItems={"center"}
+          width={"873px"}
           flexDirection={"row"}
         >
           <Switch size="medium" color="primary" />

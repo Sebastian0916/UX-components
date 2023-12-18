@@ -8,7 +8,13 @@ const IconButtonComponentomponent = () => {
   const IconMedium = ["error", "warning", "info"];
   const IconSmall = ["success", "active", "disabled"];
   return (
-    <>
+    <Stack
+      alignItems={"center"}
+      ml={"240px"}
+      justifyContent={"center"}
+      mt={4}
+      spacing={4}
+    >
       <HeaderComponents title="Icon Button" />
       <Box
         width={"873px"}
@@ -38,7 +44,7 @@ const IconButtonComponentomponent = () => {
           ))}
         </Stack>
       </Box>
-    </>
+    </Stack>
   );
 };
 export { IconButtonComponentomponent as IconButton };
