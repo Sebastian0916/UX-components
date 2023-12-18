@@ -11,9 +11,15 @@ const SliderComponent = () => {
     setValue(newValue as number[]);
   };
   return (
-    <Stack gap={4}>
+    <Stack
+      alignItems={"center"}
+      ml={"240px"}
+      justifyContent={"center"}
+      mt={4}
+      spacing={4}
+    >
       <HeaderComponents title="Slider" />
-      <Stack>
+      <Stack width={"873px"}>
         <Typography variant="caption" color="text.secondary">
           Slider | Variant: Standard | Filled | Outline | Size: Large | Medium |
           Smalls

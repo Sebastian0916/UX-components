@@ -6,7 +6,13 @@ const ButtonGroupComponent = () => {
   const ColorButtonGroup = ["primary", "secondary", "success"];
 
   return (
-    <>
+    <Stack
+      alignItems={"center"}
+      ml={"240px"}
+      justifyContent={"center"}
+      mt={4}
+      spacing={4}
+    >
       <HeaderComponents title="ButtonGroup" />
       <Box
         width={"873px"}
@@ -111,7 +117,7 @@ const ButtonGroupComponent = () => {
           ))}
         </Stack>
       </Box>
-    </>
+    </Stack>
   );
 };
 export { ButtonGroupComponent as ButtonGroup };

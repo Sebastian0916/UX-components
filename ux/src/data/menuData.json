@@ -21,7 +21,7 @@
     "label": "Checkbox"
   },
   {
-    "label": "Radio - Radio Group"
+    "label": "Radio Group"
   },
   {
     "label": "Rating"
@@ -51,6 +51,9 @@
     "label": "Avatar"
   },
   {
+    "label": "Chip"
+  },
+  {
     "label": "Icon"
   },
   {
@@ -61,6 +64,9 @@
   },
   {
     "label": "Alert"
+  },
+  {
+    "label": "Progress"
   },
   {
     "label": "Table"

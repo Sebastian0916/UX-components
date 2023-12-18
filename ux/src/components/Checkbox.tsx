@@ -4,9 +4,15 @@ import { Checkbox, Stack, Typography } from "@mui/material";
 
 const CheckboxComponent = () => {
   return (
-    <Stack gap={4}>
+    <Stack
+      alignItems={"center"}
+      ml={"240px"}
+      justifyContent={"center"}
+      mt={4}
+      spacing={4}
+    >
       <HeaderComponents title="Chekcbox" />
-      <Stack gap={1}>
+      <Stack gap={1} width={"873px"}>
         <Typography variant="caption" color="text.secondary">
           Checkbox | Checked | Size: Large | Medium | Small
         </Typography>

@@ -3,7 +3,7 @@ import ReactDOM from "react-dom/client";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { ThemeProvider } from "@mui/material";
-import { SincoTheme } from "@sinco/react";
+import { SincoTheme } from "../src/Theme";
 import { BrowserRouter } from "react-router-dom";
 
 const root = ReactDOM.createRoot(
@@ -14,7 +14,7 @@ root.render(
     <ThemeProvider theme={SincoTheme}>
       <BrowserRouter>
         <App />
-      </BrowserRouter>{" "}
+      </BrowserRouter>
     </ThemeProvider>
   </React.StrictMode>
 );

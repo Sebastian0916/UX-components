@@ -83,7 +83,13 @@ const ButtonComponent = () => {
 
   const disabledSet = [false, false, false, false, false, false, true];
   return (
-    <>
+    <Stack
+      alignItems={"center"}
+      ml={"240px"}
+      justifyContent={"center"}
+      mt={4}
+      spacing={4}
+    >
       <HeaderComponents title="Button" />
       <Stack gap={4} alignItems={"center"}>
         <ButtonSet
@@ -129,8 +135,8 @@ const ButtonComponent = () => {
           disabledSet={disabledSet}
         />
       </Stack>
-    </>
+    </Stack>
   );
 };
 
-export {ButtonComponent as Button};
+export { ButtonComponent as Button };
