@@ -1,4 +1,4 @@
-import { Button, Stack, Box, Typography, Radio, RadioGroup, FormLabel, FormControl, FormControlLabel } from '@mui/material';
+import { Stack, Box, Typography, Radio, RadioGroup, FormLabel, FormControl, FormControlLabel } from '@mui/material';
 import HeaderComponents from "./headerComponents";
 
 const RadioGroupC = () => {
@@ -6,7 +6,6 @@ const RadioGroupC = () => {
     return (
         <>
             <HeaderComponents title="Radio" />
-
             <Box width={"873px"}
                 flexDirection={"row"}
                 justifyContent={"flex-start"}
@@ -21,10 +20,10 @@ const RadioGroupC = () => {
                         </Box>
                     ))}
                     {[1, 2].map((item) => (
-                        <>
+                        <Box>
                             <Radio size={`${item === 1 ? "medium" : "small"}`} key={item} color="primary" />
                             <Radio size={`${item === 1 ? "medium" : "small"}`} key={item} color="primary" />
-                        </>
+                        </Box>
                     ))}
                 </Stack>
             </Box>

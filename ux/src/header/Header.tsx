@@ -2,8 +2,6 @@ import { Stack, Typography } from "@mui/material";
 import react from "../react.svg";
 import figma from "../figma.svg";
 import sinco from "../SINCO logos.svg";
-import React from "react";
-import { Radio } from "../components/RadioGroup";
 
 const Header = () => {
   return (

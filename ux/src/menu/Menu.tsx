@@ -7,7 +7,6 @@ import {
   Typography,
 } from "@mui/material";
 import { SincoTheme } from "@sinco/react";
-import Route from "../route/route";
 import React, { useState } from "react";
 interface MenuProps {
   setrouterPage: React.Dispatch<React.SetStateAction<string>>;
@@ -89,9 +88,9 @@ const Menu: React.FC<MenuProps> = ({ setrouterPage }) => {
             </ListItemText>
           </MenuItem>
           <Divider />
-          <MenuItem>
+          <MenuItem onClick={() => setrouterPage("Select")}>
             <ListItemText>
-              <Typography variant="body2">Select</Typography>
+              <Typography variant="body2" >Select</Typography>
             </ListItemText>
           </MenuItem>
           <Divider />
