@@ -7,7 +7,7 @@ import {
   Paper,
   Stack,
 } from "@mui/material";
-import { SincoTheme } from "@sinco/react";
+
 import menuData from "../data/menuData.json";
 interface MenuProps {
   setrouterPage: React.Dispatch<React.SetStateAction<string>>;
