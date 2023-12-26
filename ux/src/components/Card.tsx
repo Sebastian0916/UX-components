@@ -16,7 +16,7 @@ const CardExample = () => {
 
             <Stack>
                 <Card sx={{ width: 425 }}>
-                    <CardHeader  title={
+                    <CardHeader title={
                         <Stack justifyContent="space-between" flexDirection="row">
                             <Stack>
                                 <Typography variant="h6" color="text.primary">
@@ -29,12 +29,19 @@ const CardExample = () => {
                             <StarIcon fontSize="small" sx={{ color: "#FFC400" }} />
                         </Stack>
                     } />
-                    <CardContent>
-                        <TextField />
+                    <CardContent  sx={{ backgroundColor: "grey.50"}} >
+                        <Stack gap={1}>
+                            <TextField fullWidth />
+                            <TextField fullWidth />
+                            <Stack gap={1} flexDirection="row">
+                                <TextField fullWidth />
+                                <TextField fullWidth />
+                            </Stack>
+                        </Stack>
                     </CardContent>
                     <CardMedia
                         sx={{ height: 140 }}
-                        image="/static/images/cards/contemplative-reptile.jpg"
+                        image="/img-card.svg"
                         title="green iguana"
                     />
                     <CardActions sx={{

@@ -37,6 +37,7 @@ import SpeedDialComponent from "../components/SpeedDial";
 import Datagrid from "../components/Datagrid";
 import { Paginator } from "../components/Pagination";
 import { Card } from "../components/Card";
+import { Componentes } from "../components/Componentes";
 
 
 
@@ -46,6 +47,7 @@ const Routers = () => {
       <Header />
       <Menu />
       <Routes>
+        <Route path="/Componentes" element={<Componentes />} />
         <Route path="/autocomplete" element={<Autocomplete />} />
         <Route path="/button" element={<Button />} />
         <Route path="/iconButton" element={<IconButton />} />
