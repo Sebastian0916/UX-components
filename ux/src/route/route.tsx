@@ -1,10 +1,16 @@
 import React from "react";
 import Menu from "../menu/Menu";
-import { MenuC } from "../components/Menu";
 import Header from "../header/Header";
+import Icon from "../components/Icon";
+import SwitchControlled from "../components/SwitchFormControl";
+import ToggleButtons from "../components/ToggleButton";
+import SpeedDialComponent from "../components/SpeedDial";
+import Datagrid from "../components/Datagrid";
+import PopperAndPopover from "../components/PopperAndPopover";
+import StepperExample from "../components/Stepper";
+import { MenuC } from "../components/Menu";
 import { Autocomplete } from "../components/Autocomplete";
-
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes, Navigate } from "react-router-dom";
 import { Button } from "../components/Button";
 import { IconButton } from "../components/IconButton";
 import { Fab } from "../components/Fab";
@@ -30,14 +36,10 @@ import { PageHeader } from "../components/PageHeader";
 import { Badge } from "../components/Badge";
 import { ToolTip } from "../components/Tooltip";
 import { Table } from "../components/Table";
-import Icon from "../components/Icon";
-import SwitchControlled from "../components/SwitchFormControl";
-import ToggleButtons from "../components/ToggleButton";
-import SpeedDialComponent from "../components/SpeedDial";
-import Datagrid from "../components/Datagrid";
 import { Paginator } from "../components/Pagination";
 import { Card } from "../components/Card";
 import { Componentes } from "../components/Componentes";
+
 
 
 
@@ -47,7 +49,10 @@ const Routers = () => {
       <Header />
       <Menu />
       <Routes>
+        <Route path="/" element={<Navigate to="/Componentes" />} />
         <Route path="/Componentes" element={<Componentes />} />
+        <Route path="/Stepper" element={<StepperExample />} />
+        <Route path="/PopperPopover" element={<PopperAndPopover />} />
         <Route path="/autocomplete" element={<Autocomplete />} />
         <Route path="/button" element={<Button />} />
         <Route path="/iconButton" element={<IconButton />} />

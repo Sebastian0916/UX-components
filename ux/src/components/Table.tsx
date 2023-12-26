@@ -68,26 +68,6 @@ const TableBasic = () => {
                                 endAdornment: <InputAdornment position="start">{showPassword ? <VisibilityOff fontSize='small' /> : <Visibility fontSize='small' />}</InputAdornment>,
                             }}
                         />
-                        // <FormControl sx={{ m: 1, width: '25ch' }} variant="outlined">
-
-                        //     <InputLabel  >Label</InputLabel>
-                        //     <OutlinedInput
-
-                        //         endAdornment={
-                        //             <InputAdornment position="end"  >
-                        //                 <IconButton
-                        //                     aria-label="toggle password visibility"
-                        //                     edge="end"
-                        //                 >
-                        //                     <Visibility fontSize='small' />
-                        //                 </IconButton>
-                        //             </InputAdornment>
-                        //         }
-                        //         label="Label"
-                        //         defaultValue="Value"
-
-                        //     />
-                        // </FormControl>
                     ))}
                 </Box>
                 <Box display="flex" gap={2}>
