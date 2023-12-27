@@ -21,17 +21,26 @@ const RadioGroupC = () => {
                 mt={4}>
                 <Typography variant='caption' color="text.secondary">Radio Group | Size: Small | Medium | large </Typography>
                 <Stack flexDirection={"row"} justifyContent={"space-between"}>
-                    {sizesOptions.map((item) => (
-                        <Box>
-                            <Radio size='medium' key={item} color="primary" />
-                        </Box>
-                    ))}
-                    {[1, 2].map((item) => (
-                        <Box >
-                            <Radio size={`${item === 1 ? "medium" : "small"}`} key={item} color="primary" />
-                            <Radio size={`${item === 1 ? "medium" : "small"}`} key={item} color="primary" />
-                        </Box>
-                    ))}
+                    <>
+                        {[1, 2, 3].map((item) => (
+                            <>
+                                <>
+                                    <Radio size="large" key={item} color="primary" />
+                                </>
+
+                            </>
+                        ))}
+                        {[1, 2].map((item) => (
+                            <>
+                                <Radio size="medium" key={item} color="primary" />
+                            </>
+                        ))}
+                        {[1, 2].map((item) => (
+                            <>
+                                <Radio size="medium" key={item} color="primary" />
+                            </>
+                        ))}
+                    </>
                 </Stack>
             </Box>
 

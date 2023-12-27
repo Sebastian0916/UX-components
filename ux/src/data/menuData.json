@@ -3,6 +3,9 @@
     "title": "COMPONENTES"
   },
   {
+    "label": "Componentes"
+  },
+  {
     "label": "Autocomplete"
   },
   {
@@ -99,7 +102,7 @@
     "label": "DataGrid MUI X PRO"
   },
   {
-    "label": "Popper | Poppover"
+    "label": "PopperPopover"
   },
   {
     "label": "Empty State"
