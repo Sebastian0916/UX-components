@@ -24,7 +24,7 @@ const SelectComponent = () => {
             <Stack gap={1}>
                 <HeaderComponents title="Select" />
                 <Stack display="flex" gap={4}>
-                    <Typography variant='caption' color="text.secondary">Radio Group | Size: Small | Medium | large </Typography>
+                    <Typography variant='caption' color="text.secondary">Select | Variant: Standard | Filled | Outline | Size: Large | Medium | Small </Typography>
                 </Stack>
                 <Stack display="flex" flexDirection="row" width="100%" gap={1}>
 

@@ -39,6 +39,7 @@ import { Table } from "../components/Table";
 import { Paginator } from "../components/Pagination";
 import { Card } from "../components/Card";
 import { Componentes } from "../components/Componentes";
+import BasicTabs from "../components/Tabs";
 
 
 
@@ -51,6 +52,7 @@ const Routers = () => {
       <Routes>
         <Route path="/" element={<Navigate to="/Componentes" />} />
         <Route path="/Componentes" element={<Componentes />} />
+        <Route path="/Tab" element={<BasicTabs />} />
         <Route path="/Stepper" element={<StepperExample />} />
         <Route path="/PopperPopover" element={<PopperAndPopover />} />
         <Route path="/autocomplete" element={<Autocomplete />} />
