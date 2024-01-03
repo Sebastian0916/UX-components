@@ -37,148 +37,151 @@ const TableBasic = () => {
     return (
         <Stack
             alignItems="center"
-            ml="350px"
+            ml="240px"
             mb="200px"
-            width="750px"
             justifyContent="center"
             mt={4}
             spacing={4}
         >
-            <HeaderComponents title="Table" />
-            <Stack
+            <Box
                 width="873px"
-                alignContent="center"
+                flexDirection={"column"}
+                justifyContent={"flex-start"}
+                alignItems={"center"}
+                mb={1.5}
+                gap={3}
             >
-                <Typography variant="caption" color="text.secondary">
-                    Table | Standard
-                </Typography>
+                <HeaderComponents title="Table" />
+                <Stack
+                    alignContent="center"
+                >
+                    <Typography variant="caption" color="text.secondary">
+                        Table | Standard
+                    </Typography>
+                </Stack>
 
+                <Stack alignItems="center" flexDirection="row" justifyContent="space-between">
+                    <Box>
+                        {[1, 2].map((element) => (
+                            <TextField
+                                size="medium"
+                                label="Label"
+                                defaultValue="Value"
+                                sx={{ m: 1, width: '25ch' }}
+                                InputProps={{
+                                    endAdornment: <InputAdornment position="start"><Visibility fontSize='small' /></InputAdornment>,
+                                }}
+                            />
+                        ))}
+                    </Box>
+                    <Box display="flex" gap={2}>
+                        <Button variant='text' >Cancelar</Button>
+                        <Button variant='contained' startIcon={<SearchIcon fontSize="large" />}> Buscar</Button>
+                    </Box>
+                </Stack>
 
-            </Stack>
-
-            <Stack width="873px" alignItems="center" flexDirection="row" justifyContent="space-between">
-                <Box>
-                    {[1, 2].map((element) => (
-                        <TextField
-                            size="medium"
-                            label="Label"
-                            defaultValue="Value"
-                            sx={{ m: 1, width: '25ch' }}
-                            InputProps={{
-                                endAdornment: <InputAdornment position="start">{showPassword ? <VisibilityOff fontSize='small' /> : <Visibility fontSize='small' />}</InputAdornment>,
-                            }}
-                        />
-                    ))}
-                </Box>
-                <Box display="flex" gap={2}>
-                    <Button variant='text' >Cancelar</Button>
-                    <Button variant='contained' startIcon={<SearchIcon fontSize="large" />}> Buscar</Button>
-                </Box>
-            </Stack>
-
-            <Box width="873px">
-                <TableContainer component={Paper}>
-                    <Table size="medium">
-                        <TableHead>
-                            <TableRow>
-                                <TableCell></TableCell>
-                                <TableCell>Nombre</TableCell>
-                                <TableCell align="left">Email</TableCell>
-                                <TableCell align="left">location</TableCell>
-                                <TableCell align="left">Status</TableCell>
-                                <TableCell align="left">ID</TableCell>
-                            </TableRow>
-                        </TableHead>
-                        <TableBody
-                        >
-                            {rows.map((row) => (
-                                <TableRow
-                                    key={row.name}
-                                    sx={{ '&:hover': { border: 0, backgroundColor: "action.hover" } }}
-                                >
-                                    <TableCell component="th" scope="row">
-                                        {row.checkbox}
-                                    </TableCell>
-                                    <TableCell>{row.name}</TableCell>
-                                    <TableCell align="left">{row.email}</TableCell>
-                                    <TableCell align="left">{row.location}</TableCell>
-                                    <TableCell align="left">
-                                        <Chip label={row.status} sx={{ backgroundColor: row.chipColor }} />
-                                    </TableCell>
-                                    <TableCell align="left"><a>{row.id}</a></TableCell>
+                <Box >
+                    <TableContainer component={Paper}>
+                        <Table size="medium">
+                            <TableHead>
+                                <TableRow>
+                                    <TableCell></TableCell>
+                                    <TableCell>Nombre</TableCell>
+                                    <TableCell align="left">Email</TableCell>
+                                    <TableCell align="left">location</TableCell>
+                                    <TableCell align="left">Status</TableCell>
+                                    <TableCell align="left">ID</TableCell>
                                 </TableRow>
-                            ))}
-                        </TableBody>
-                    </Table>
-                </TableContainer>
-            </Box>
-
-            <Stack
-                width="873px"
-                alignContent="center"
-            >
-                <Typography variant="caption" color="text.secondary">
-                    Table | small
-                </Typography>
-            </Stack>
-
-            <Stack width="873px" alignItems="center" flexDirection="row" justifyContent="space-between">
-                <Box>
-                    {[1, 2].map((element) => (
-                        <TextField
-                            size="small"
-                            defaultValue="Value"
-                            label="Label"
-                            sx={{ m: 1, width: '25ch' }}
-                            InputProps={{
-                                endAdornment: <InputAdornment position="start"> <VisibilityOff fontSize='small' /> </InputAdornment>,
-                            }}
-                        />
-                    ))}
+                            </TableHead>
+                            <TableBody
+                            >
+                                {rows.map((row) => (
+                                    <TableRow
+                                        key={row.name}
+                                        sx={{ '&:hover': { border: 0, backgroundColor: "action.hover" } }}
+                                    >
+                                        <TableCell component="th" scope="row">
+                                            {row.checkbox}
+                                        </TableCell>
+                                        <TableCell>{row.name}</TableCell>
+                                        <TableCell align="left">{row.email}</TableCell>
+                                        <TableCell align="left">{row.location}</TableCell>
+                                        <TableCell align="left">
+                                            <Chip label={row.status} sx={{ backgroundColor: row.chipColor }} />
+                                        </TableCell>
+                                        <TableCell align="left"><a>{row.id}</a></TableCell>
+                                    </TableRow>
+                                ))}
+                            </TableBody>
+                        </Table>
+                    </TableContainer>
                 </Box>
-                <Box display="flex" gap={2}>
-                    <Button variant='text' size="small">Cancelar</Button>
-                    <Button variant='contained' size="small" startIcon={<SearchIcon fontSize="small" />}> Buscar</Button>
-                </Box>
-            </Stack>
 
-            <Box width="873px">
-                <TableContainer component={Paper}>
-                    <Table size="small">
-                        <TableHead>
-                            <TableRow>
-                                <TableCell></TableCell>
-                                <TableCell>Nombre</TableCell>
-                                <TableCell align="left">Email</TableCell>
-                                <TableCell align="left">location</TableCell>
-                                <TableCell align="left">Status</TableCell>
-                                <TableCell align="left">ID</TableCell>
-                            </TableRow>
-                        </TableHead>
-                        <TableBody
-                        >
-                            {rows.map((row) => (
-                                <TableRow
-                                    key={row.name}
-                                    sx={{ '&:hover': { border: 0, backgroundColor: "action.hover" } }}
-                                >
-                                    <TableCell component="th" scope="row">
-                                        {row.checkbox}
-                                    </TableCell>
-                                    <TableCell>{row.name}</TableCell>
-                                    <TableCell align="left">{row.email}</TableCell>
-                                    <TableCell align="left">{row.location}</TableCell>
-                                    <TableCell align="left">
-                                        <Chip label={row.status} sx={{ backgroundColor: row.chipColor }} />
-                                    </TableCell>
-                                    <TableCell align="left"><a>{row.id}</a></TableCell>
+                <Stack
+                    alignContent="center"
+                >
+                    <Typography variant="caption" color="text.secondary">
+                        Table | small
+                    </Typography>
+                </Stack>
+
+                <Stack alignItems="center" flexDirection="row" justifyContent="space-between">
+                    <Box>
+                        {[1, 2].map((element) => (
+                            <TextField
+                                size="small"
+                                defaultValue="Value"
+                                label="Label"
+                                sx={{ m: 1, width: '25ch' }}
+                                InputProps={{
+                                    endAdornment: <InputAdornment position="start"> <VisibilityOff fontSize='small' /> </InputAdornment>,
+                                }}
+                            />
+                        ))}
+                    </Box>
+                    <Box display="flex" gap={2}>
+                        <Button variant='text' size="small">Cancelar</Button>
+                        <Button variant='contained' size="small" startIcon={<SearchIcon fontSize="small" />}> Buscar</Button>
+                    </Box>
+                </Stack>
+
+                <Box >
+                    <TableContainer component={Paper}>
+                        <Table size="small">
+                            <TableHead>
+                                <TableRow>
+                                    <TableCell></TableCell>
+                                    <TableCell>Nombre</TableCell>
+                                    <TableCell align="left">Email</TableCell>
+                                    <TableCell align="left">location</TableCell>
+                                    <TableCell align="left">Status</TableCell>
+                                    <TableCell align="left">ID</TableCell>
                                 </TableRow>
-                            ))}
-                        </TableBody>
-                    </Table>
-                </TableContainer>
+                            </TableHead>
+                            <TableBody
+                            >
+                                {rows.map((row) => (
+                                    <TableRow
+                                        key={row.name}
+                                        sx={{ '&:hover': { border: 0, backgroundColor: "action.hover" } }}
+                                    >
+                                        <TableCell component="th" scope="row">
+                                            {row.checkbox}
+                                        </TableCell>
+                                        <TableCell>{row.name}</TableCell>
+                                        <TableCell align="left">{row.email}</TableCell>
+                                        <TableCell align="left">{row.location}</TableCell>
+                                        <TableCell align="left">
+                                            <Chip label={row.status} sx={{ backgroundColor: row.chipColor }} />
+                                        </TableCell>
+                                        <TableCell align="left"><a>{row.id}</a></TableCell>
+                                    </TableRow>
+                                ))}
+                            </TableBody>
+                        </Table>
+                    </TableContainer>
+                </Box>
             </Box>
-
         </Stack>
     );
 };

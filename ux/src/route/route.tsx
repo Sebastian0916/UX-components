@@ -31,7 +31,7 @@ import { Progress } from "../components/Progress";
 import { Dialog } from "../components/Dialog";
 import { EmptyState } from "../components/EmptyState";
 import { ToastNotification } from "../components/ToastNotification";
-import { FooterAction } from "../components/FooterAction";
+import { FooterActionExample } from "../components/FooterAction";
 import { PageHeader } from "../components/PageHeader";
 import { Badge } from "../components/Badge";
 import { ToolTip } from "../components/Tooltip";
@@ -40,6 +40,7 @@ import { Paginator } from "../components/Pagination";
 import { Card } from "../components/Card";
 import { Componentes } from "../components/Componentes";
 import BasicTabs from "../components/Tabs";
+import ModalExample from "../components/Modal";
 
 
 
@@ -81,13 +82,14 @@ const Routers = () => {
         <Route path="/Accordion" element={<Accordion />} />
         <Route path="/Progress" element={<Progress />} />
         <Route path="/Menu" element={<MenuC />} />
+        <Route path="/Modal" element={<ModalExample />} />
         <Route path="/SpeedDial" element={<SpeedDialComponent />} />
         <Route path="/Dialog" element={<Dialog />} />
         <Route path="/DataGrid" element={<Datagrid />} />
         <Route path="/Table" element={<Table />} />
         <Route path="/EmptyState" element={<EmptyState />} />
         <Route path="/ToastNotification" element={<ToastNotification />} />
-        <Route path="/FooterActions" element={<FooterAction />} />
+        <Route path="/FooterActions" element={<FooterActionExample />} />
         <Route path="/PageHeader" element={<PageHeader />} />
       </Routes>
     </>

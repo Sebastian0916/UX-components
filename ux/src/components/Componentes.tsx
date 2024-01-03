@@ -32,7 +32,7 @@ import Datagrid from "./Datagrid"
 import { Table } from "./Table"
 import { EmptyState } from "./EmptyState"
 import { ToastNotification } from "./ToastNotification"
-import { FooterAction } from "./FooterAction"
+import { FooterActionExample } from "./FooterAction"
 import { PageHeader } from "./PageHeader"
 
 export const Componentes = () => {
@@ -42,6 +42,7 @@ export const Componentes = () => {
             ml="240px"
             justifyContent="center"
             mt={4}
+            mb={4}
             spacing={4}
             overflow="auto"
             flex={1}
@@ -79,7 +80,7 @@ export const Componentes = () => {
             <Table />
             <EmptyState />
             <ToastNotification />
-            <FooterAction />
+            <FooterActionExample />
             <PageHeader />
         </Stack >
     )
