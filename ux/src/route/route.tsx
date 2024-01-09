@@ -89,8 +89,8 @@ const Routers = () => {
         <Route path="/Table" element={<Table />} />
         <Route path="/EmptyState" element={<EmptyState />} />
         <Route path="/ToastNotification" element={<ToastNotification />} />
-        <Route path="/FooterActions" element={<FooterActionExample />} />
         <Route path="/PageHeader" element={<PageHeader />} />
+        <Route path="/FooterActions" element={<FooterActionExample />} />
       </Routes>
     </>
   );

@@ -635,8 +635,8 @@ export const components: Components = {
       root: {
         padding: "7px 16px 7px 16px",
         ".MuiMenuList-root": {
-          height: 20,
-          minHeight: 20,
+          height: 34,
+          minHeight: 34,
         },
         ".MuiListItemText-root > .MuiTypography-root": {
           lineHeight: "20px",

@@ -42,7 +42,7 @@ export const Componentes = () => {
             ml="240px"
             justifyContent="center"
             mt={4}
-            mb={4}
+            mb={8}
             spacing={4}
             overflow="auto"
             flex={1}
@@ -80,8 +80,8 @@ export const Componentes = () => {
             <Table />
             <EmptyState />
             <ToastNotification />
-            <FooterActionExample />
             <PageHeader />
+            <FooterActionExample />
         </Stack >
     )
 }

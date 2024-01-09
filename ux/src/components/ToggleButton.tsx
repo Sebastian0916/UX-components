@@ -52,7 +52,7 @@ export default function ToggleButtons() {
                 </ToggleButton>
             </ToggleButtonGroup>
             <Box width={"429px"}>
-                <Typography color="text.primary" variant="body1" >
+                <Typography color="text.primary" variant="body1" textAlign="left" >
                     Lorem ipsum dolor, sit amet consectetur
                     adipisicing elit. Quibusdam labore eius voluptatem odio doloribus.
                     Perferendis quidem nemo in nobis dignissimos aperiam deleniti

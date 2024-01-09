@@ -1,9 +1,15 @@
+import React, { useState } from "react";
 import { Box, Button, Stack, Typography } from "@mui/material";
-import React from "react";
 import HeaderComponents from "./headerComponents";
 import { FooterAction } from "@sinco/react";
 
 export const FooterActionExample = () => {
+  const [isFooterActionVisible, setIsFooterActionVisible] = useState(false);
+
+  const toggleFooterAction = () => {
+    setIsFooterActionVisible(!isFooterActionVisible);
+  };
+
   return (
     <Stack
       alignItems={"center"}
@@ -13,8 +19,24 @@ export const FooterActionExample = () => {
       spacing={4}
     >
       <HeaderComponents title="FooterAction" />
-        <Box width="300px !important">
-      {/* <Box width={873}> */}
+      <Box
+        width="873px"
+        flexDirection="column"
+        justifyContent="flex-start"
+        alignItems="center"
+        mb={1}
+        gap={3}
+      >
+        <Typography variant="caption" color="text.secondary">
+          FooterActions
+        </Typography>
+      </Box>
+      <Box display="flex">
+        <Button variant="outlined" onClick={toggleFooterAction} size="medium">
+          {isFooterActionVisible ? "Ocultar Footer" : "Mostrar Footer"}
+        </Button>
+
+        {isFooterActionVisible && (
           <FooterAction
             labelChangeCounter={
               <Typography color="text.secondary" variant="body2" display="flex">
@@ -41,9 +63,8 @@ export const FooterActionExample = () => {
               </>
             }
           ></FooterAction>
-        {/* </Box> */}
+        )}
       </Box>
     </Stack>
   );
 };
-
