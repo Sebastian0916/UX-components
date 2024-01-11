@@ -5,12 +5,13 @@ import reportWebVitals from "./reportWebVitals";
 import { ThemeProvider } from "@mui/material";
 
 import { BrowserRouter } from "react-router-dom";
-import { SincoTheme } from "./Theme";
+import { SincoTheme } from "@sinco/react";
 
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
-);
+  );
+  console.log(SincoTheme.palette.grey[300])
 root.render(
   <React.StrictMode>
     <ThemeProvider theme={SincoTheme}>

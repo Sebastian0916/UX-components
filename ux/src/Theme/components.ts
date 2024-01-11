@@ -568,7 +568,7 @@ export const components: Components = {
           transform: "translate(14px, 15px) scale(1)",
 
           "&.MuiInputLabel-shrink": {
-            transform: "translate(14px, -9px) scale(0.75)",
+            transform: "translate(14px, -7px) scale(0.75)",
           },
         },
       },
@@ -658,17 +658,19 @@ export const components: Components = {
         ".MuiListItem-dense": {
           padding: "0.25px 12px 0.25px 16px"
         },
-
       }
     }
   },
   MuiListItemButton: {
     styleOverrides: {
       dense: {
-        padding: "4px 16px 4px 16px"
+        padding: "4px 16px 4px 16px "
       },
       root: {
-        padding: "8.5px 16px"
+        padding: "8.5px 16px",
+        ".MuiListItemText-multiline": {
+          marginBlock: "4px",
+        }
       }
     }
   },

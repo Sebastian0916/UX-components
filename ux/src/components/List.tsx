@@ -40,7 +40,7 @@ const ListComponent = () => {
             </ListItem>
           </List>
           <List sx={{ width: 260 }}>
-            <ListItem selected={true}>
+            <ListItem >
               <ListItemButton>
                 <ListItemIcon>
                   <Star />

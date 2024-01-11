@@ -67,7 +67,7 @@ const SelectComponent = () => {
                             labelId="demo-simple-select-label"
                             id="demo-simple-select"
                             value={age}
-                            label="Age"
+                            label="Disabled"
                             autoWidth
                             onChange={handleChange}
                         >

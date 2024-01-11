@@ -47,9 +47,9 @@ const TableBasic = () => {
                 width="873px"
                 flexDirection={"column"}
                 justifyContent={"flex-start"}
-                alignItems={"center"}
                 mb={1.5}
-                gap={3}
+                gap={2}
+                display={"flex"}
             >
                 <HeaderComponents title="Table" />
                 <Stack
