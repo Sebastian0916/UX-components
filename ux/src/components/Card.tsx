@@ -1,6 +1,6 @@
 import { Box, Button, Card, CardActions, CardContent, CardHeader, CardMedia, Divider, InputAdornment, Stack, TextField, Typography } from "@mui/material"
+import HeaderComponents from "./headerComponents" 
 import StarIcon from '@mui/icons-material/Star';
-import HeaderComponents from "./headerComponents"
 import Visibility from '@mui/icons-material/Visibility';
 import CreditCardIcon from '@mui/icons-material/CreditCard';
 import React from "react";
@@ -52,7 +52,6 @@ const CardExample = () => {
                             </Stack>
                         }
                         >
-                            {/* <Divider /> */}
                         </CardHeader>
                         <CardContent sx={{ backgroundColor: "grey.50", borderTop: "1px solid", borderTopColor: "divider" }} >
                             <Stack gap={1.5}>

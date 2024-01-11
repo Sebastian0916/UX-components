@@ -16,7 +16,7 @@ const BadgeComponent = () => {
         >
             <HeaderComponents title="Badge" />
             <Stack width="873px" alignContent="center" >
-                <Typography variant="caption" color="text.seocndary">
+                <Typography variant="caption" color="text.secondary">
                     Badge | Standard | Variant: Default | Primary | Secondary | Error | Warning | Info | Success
                 </Typography>
             </Stack>
@@ -33,7 +33,7 @@ const BadgeComponent = () => {
                 ))}
             </Stack>
             <Stack width="873px" alignContent="center" >
-                <Typography variant="caption" color="text.seocndary" textAlign={'left'}>
+                <Typography variant="caption" color="text.secondary" textAlign={'left'}>
                     Badge | Standard | Variant: dot | Primary | Secondary | Error | Warning | Info | Success
                 </Typography>
             </Stack>
@@ -50,7 +50,7 @@ const BadgeComponent = () => {
                 ))}
             </Stack>
             <Stack width="873px" alignContent="center">
-                <Typography variant="caption" color="text.seocndary">
+                <Typography variant="caption" color="text.secondary">
                     Badge whit instance | Standard & Dot | Variant: Default | Primary | Secondary | Error | Warning | Info | Success
                 </Typography>
             </Stack>
