@@ -5,11 +5,7 @@ import {
   Stack,
   Typography,
 } from "@mui/material";
-import LoadingButton from '@mui/lab/LoadingButton';
-
 import HeaderComponents from "./headerComponents";
-import { Save } from "@mui/icons-material";
-
 const ProgressComponent = () => {
   return (
     <Stack
@@ -73,24 +69,8 @@ const ProgressComponent = () => {
         <Typography variant="caption" color="text.secondary">
           Button Progress | Type: Determinate | Buffer | Interminate
         </Typography>
-        <Stack gap={2}>
-          <Stack
-            flexDirection={"row"}
-            alignItems={"center"}
-            justifyContent={"center"}
-          >
-            <LoadingButton
-              loading
-              loadingPosition="start"
-              startIcon={<Save />}
-              variant="text"
-            >
-              Save
-            </LoadingButton>
-          </Stack>
-        </Stack>
       </Stack>
-    </Stack>
+    </Stack >
   );
 };
 

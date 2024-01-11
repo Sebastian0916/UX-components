@@ -5,13 +5,12 @@ const PaginationExample = () => {
     return (
         <Stack
             alignItems="center"
-            ml="350px"
-            width="750px"
+            ml="240px"
             justifyContent="center"
             mt={4}
             spacing={4}
         >
-             <HeaderComponents title="Pagination" />
+            <HeaderComponents title="Pagination" />
             <Stack
                 width="873px"
                 alignContent="center"

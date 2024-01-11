@@ -2,6 +2,9 @@ import { Button, Stack, Typography } from "@mui/material";
 import { StarRate } from "@mui/icons-material";
 import React from "react";
 import HeaderComponents from "./headerComponents";
+import { LoadingButton } from "@mui/lab";
+import { Save } from "@mui/icons-material";
+
 type MaterialUIColor =
   | "inherit"
   | "primary"
@@ -134,6 +137,17 @@ const ButtonComponent = () => {
           sizeSet={sizeSet}
           disabledSet={disabledSet}
         />
+      </Stack>
+      <Stack alignItems={"center"} justifyContent={"center"} spacing={1}>
+        <Typography variant="caption" color="text.secondary">Button | loading</Typography>
+        <LoadingButton
+          loading
+          loadingPosition="start"
+          startIcon={<Save />}
+          variant="text"
+        >
+          Save
+        </LoadingButton>
       </Stack>
     </Stack>
   );

@@ -8,7 +8,7 @@ const Header = () => {
   return (
     <>
       <Stack
-        paddingTop={"54px"}
+        paddingBlock={"54px"}
         ml={"240px"}
         gap={2}
         bgcolor={"background.default"}

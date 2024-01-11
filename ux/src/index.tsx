@@ -5,7 +5,7 @@ import reportWebVitals from "./reportWebVitals";
 import { ThemeProvider } from "@mui/material";
 
 import { BrowserRouter } from "react-router-dom";
-import { SincoTheme } from "@sinco/react";
+import { SincoTheme } from "../src/Theme";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
