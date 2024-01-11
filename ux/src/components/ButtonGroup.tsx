@@ -64,7 +64,7 @@ const ButtonGroupComponent = () => {
             >
               <Button>{color}</Button>
               <Button>
-                <ArrowDropDownIcon fontSize="large" />{" "}
+                <ArrowDropDownIcon fontSize="medium" />{" "}
               </Button>
             </ButtonGroup>
           ))}
@@ -111,7 +111,7 @@ const ButtonGroupComponent = () => {
             >
               <Button>{color}</Button>
               <Button>
-                <ArrowDropDownIcon fontSize="large" />{" "}
+                <ArrowDropDownIcon fontSize="medium" />{" "}
               </Button>
             </ButtonGroup>
           ))}

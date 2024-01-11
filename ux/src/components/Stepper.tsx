@@ -79,7 +79,7 @@ export default function StepperExample() {
           Tab | horizontal | vertical
         </Typography>
 
-        <Stepper nonLinear activeStep={activeStep}>
+        <Stepper nonLinear activeStep={activeStep} >
           {steps.map((label, index) => (
             <Step key={label} completed={completed[index]}>
               <StepButton color="inherit" onClick={handleStep(index)}>
