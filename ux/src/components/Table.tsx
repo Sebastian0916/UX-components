@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { SincoTheme } from '@sinco/react';
-import { Box, Button, Checkbox, Chip, Paper, Stack, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Typography, InputLabel, OutlinedInput, InputAdornment, IconButton, FormControl, TextField } from '@mui/material';
+import { Box, Button, Checkbox, Chip, Paper, Stack, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Typography, InputAdornment, TextField } from '@mui/material';
 import Visibility from '@mui/icons-material/Visibility';
 import VisibilityOff from '@mui/icons-material/VisibilityOff';
 import SearchIcon from '@mui/icons-material/Search';
@@ -31,8 +31,6 @@ const rows = [
 ];
 
 const TableBasic = () => {
-
-    const [showPassword, setShowPassword] = React.useState(false);
 
     return (
         <Stack
@@ -109,7 +107,7 @@ const TableBasic = () => {
                                         <TableCell align="left">
                                             <Chip label={row.status} sx={{ backgroundColor: row.chipColor }} />
                                         </TableCell>
-                                        <TableCell align="left"><a>{row.id}</a></TableCell>
+                                        <TableCell align="left">{row.id}</TableCell>
                                     </TableRow>
                                 ))}
                             </TableBody>
@@ -174,7 +172,7 @@ const TableBasic = () => {
                                         <TableCell align="left">
                                             <Chip label={row.status} sx={{ backgroundColor: row.chipColor }} />
                                         </TableCell>
-                                        <TableCell align="left"><a>{row.id}</a></TableCell>
+                                        <TableCell align="left">{row.id}</TableCell>
                                     </TableRow>
                                 ))}
                             </TableBody>

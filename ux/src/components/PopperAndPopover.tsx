@@ -29,7 +29,7 @@ export default function PopperAndPopover() {
             justifyContent="center"
             mt={4}
             spacing={4}>
-            <HeaderComponents title="Popper | Popover" />
+            <HeaderComponents title="Popper" link='Popper' />
             <Box
                 width="873px"
                 flexDirection="column"
@@ -46,7 +46,7 @@ export default function PopperAndPopover() {
                     </Typography>
                 </Stack>
 
-                <Stack  justifyContent="center" flexDirection="column" gap={1}>
+                <Stack justifyContent="center" flexDirection="column" gap={1}>
                     <Button variant="outlined" color="primary" onClick={handleClick}>
                         Open popper
                     </Button>
@@ -57,6 +57,7 @@ export default function PopperAndPopover() {
                         </Box>
                     </Popper>
 
+                    <HeaderComponents title="Popper" link='Popover' />
 
                     <Button variant="outlined" color="primary" onClick={openPopover}>
                         Open Popover

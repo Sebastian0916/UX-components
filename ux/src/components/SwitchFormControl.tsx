@@ -1,4 +1,3 @@
-import * as React from 'react';
 import { FormControlLabel, FormControl, Stack, FormGroup, Switch,Typography } from '@mui/material';
 import HeaderComponents from './headerComponents';
 
@@ -12,7 +11,7 @@ export default function SwitchControlled() {
             justifyContent={"center"}
             mt={4}
             spacing={4}>
-            <HeaderComponents title='SwitchFormControl' />
+            <HeaderComponents title='SwitchFormControl' link='switch'/>
             <Stack width="873px" alignContent="center">
                 <Typography variant="caption" color="text.seocndary">
                     Switch | Size: Medium | Small

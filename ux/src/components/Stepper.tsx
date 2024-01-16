@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {Box,Stepper,Step,StepButton,Button,Typography, Stack} from '@mui/material';
+import { Box, Stepper, Step, StepButton, Button, Typography, Stack } from '@mui/material';
 import HeaderComponents from './headerComponents';
 
 const steps = ['Primer paso', 'Segundo paso', 'Tercer paso'];
@@ -29,8 +29,7 @@ export default function StepperExample() {
   const handleNext = () => {
     const newActiveStep =
       isLastStep() && !allStepsCompleted()
-        ? // It's the last step, but not all steps have been completed,
-        // find the first step that has been completed
+        ?
         steps.findIndex((step, i) => !(i in completed))
         : activeStep + 1;
     setActiveStep(newActiveStep);
@@ -43,14 +42,6 @@ export default function StepperExample() {
   const handleStep = (step: number) => () => {
     setActiveStep(step);
   };
-
-  const handleComplete = () => {
-    const newCompleted = completed;
-    newCompleted[activeStep] = true;
-    setCompleted(newCompleted);
-    handleNext();
-  };
-
   const handleReset = () => {
     setActiveStep(0);
     setCompleted({});
@@ -65,7 +56,7 @@ export default function StepperExample() {
       mt={4}
       spacing={4}
     >
-      <HeaderComponents title="Steper" />
+      <HeaderComponents title="Stepper" />
 
       <Box
         width={"873px"}

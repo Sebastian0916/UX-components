@@ -18,7 +18,7 @@ const AccordionComponent = () => {
       mt={4}
       spacing={4}
     >
-      <HeaderComponents title="Accordion" />
+      <HeaderComponents title="Accordion"  />
       <Stack width={873} gap={2}>
         <Typography variant="caption" color="text.secondary">
           Accordion | Expanded | Disabled

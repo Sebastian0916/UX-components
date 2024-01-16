@@ -25,7 +25,7 @@ export default function ToggleButtons() {
             mt={4}
             spacing={4}
         >
-            <HeaderComponents title='ToggleButton' />
+            <HeaderComponents title='ToggleButton' link='Toggle-Button' />
             <Box width="873px">
                 <Typography ml="240px" variant="caption" color="text.secondary">
                     Toggle button | Size: Large | Medium | Small | Inherit

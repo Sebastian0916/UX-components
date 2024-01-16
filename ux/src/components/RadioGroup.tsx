@@ -1,4 +1,4 @@
-import { Button, Stack, Box, Typography, Radio, RadioGroup, FormLabel, FormControl, FormControlLabel } from '@mui/material';
+import {  Stack, Box, Typography, Radio, RadioGroup, FormLabel, FormControl, FormControlLabel } from '@mui/material';
 import HeaderComponents from "./headerComponents";
 
 const RadioGroupC = () => {
@@ -11,7 +11,7 @@ const RadioGroupC = () => {
             mt={4}
             spacing={4}
         >
-            <HeaderComponents title="Radio" />
+            <HeaderComponents title="Radio" link='radio-button'/>
 
             <Box width={"873px"}
                 flexDirection={"row"}

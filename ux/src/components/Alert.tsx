@@ -1,7 +1,6 @@
 import React from "react";
 import { Alert, AlertTitle, Stack, Typography } from "@mui/material";
 import HeaderComponents from "./headerComponents";
-import { Info } from "@mui/icons-material";
 
 type AlertType = {
   variant: "filled" | "outlined" | "standard";
@@ -9,6 +8,8 @@ type AlertType = {
 };
 
 const AlertComponent = () => {
+  const currentComponent = "alert"
+
   const filledAlerts: AlertType[] = [
     { variant: "filled", severity: "error" },
     { variant: "filled", severity: "warning" },
@@ -34,7 +35,7 @@ const AlertComponent = () => {
     return alerts.map((alert, index) => (
       <Alert
         key={index}
-        onClose={() => {}}
+        onClose={() => { }}
         variant={alert.variant}
         sx={{ width: 240 }}
         severity={alert.severity}
@@ -53,7 +54,7 @@ const AlertComponent = () => {
       mt={4}
       spacing={4}
     >
-      <HeaderComponents title="Alert" />
+      <HeaderComponents title="Alert"  />
       <Stack gap={2} width={873} flexDirection={"row"}>
         <Stack>
           <Typography variant="caption" color="text.secondary">

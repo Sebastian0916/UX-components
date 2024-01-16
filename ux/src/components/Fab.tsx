@@ -42,7 +42,7 @@ const FabComponent = () => {
       mt={4}
       spacing={4}
     >
-      <HeaderComponents title="Fab" />
+      <HeaderComponents title="Fab" link="floating-action-button" />
       <Stack gap={1} width={"873px"}>
         <Stack alignItems={"flex-start"}>
           <Typography color={"text.secondary"} variant="caption">

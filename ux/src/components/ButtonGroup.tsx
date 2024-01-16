@@ -13,7 +13,7 @@ const ButtonGroupComponent = () => {
       mt={4}
       spacing={4}
     >
-      <HeaderComponents title="ButtonGroup" />
+      <HeaderComponents title="ButtonGroup" link="Button-Group"/>
       <Box
         width={"873px"}
         flexDirection={"column"}

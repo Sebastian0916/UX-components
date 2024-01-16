@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Stack, Typography, IconButton, Box } from '@mui/material';
+import { Stack, Typography,  Box } from '@mui/material';
 import HeaderComponents from './headerComponents';
 import { Star } from "@mui/icons-material";
 
@@ -15,7 +15,7 @@ export default function Icon() {
             mt={4}
             spacing={4}
         >
-            <HeaderComponents title="Card" />
+            <HeaderComponents title="Icon" link={`material-icons`} />
             <Box
                 width={"873px"}
                 flexDirection={"column"}

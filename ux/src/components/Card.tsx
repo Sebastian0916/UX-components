@@ -1,18 +1,11 @@
-import { Box, Button, Card, CardActions, CardContent, CardHeader, CardMedia, Divider, InputAdornment, Stack, TextField, Typography } from "@mui/material"
+import { Box, Button, Card, CardActions, CardContent, CardHeader, CardMedia,  InputAdornment, Stack, TextField, Typography } from "@mui/material"
 import HeaderComponents from "./headerComponents" 
 import StarIcon from '@mui/icons-material/Star';
 import Visibility from '@mui/icons-material/Visibility';
 import CreditCardIcon from '@mui/icons-material/CreditCard';
 import React from "react";
 
-
-interface ModelTextfield {
-    defaultValue: string,
-
-}
-
 const CardExample = () => {
-    const [showPassword, setShowPassword] = React.useState(false);
     return (
         <Stack
             alignItems="center"

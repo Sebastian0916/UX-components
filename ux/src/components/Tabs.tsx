@@ -5,12 +5,6 @@ import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline';
 import CancelOutlinedIcon from '@mui/icons-material/CancelOutlined';
 import HeaderComponents from './headerComponents';
 
-interface TabPanelProps {
-    children?: React.ReactNode;
-    index: number;
-    value: number;
-}
-
 
 export default function BasicTabs() {
     const [value, setValue] = React.useState(0);
@@ -43,9 +37,9 @@ export default function BasicTabs() {
                 <Box sx={{ width: '100%' }}>
                     <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
                         <Tabs variant='fullWidth' value={value} onChange={handleChange} aria-label="basic tabs example">
-                            <Tab label="Completados" iconPosition='start' icon={<CheckCircleOutlineIcon  fontSize='medium' />} />
-                            <Tab label="Advertencias" iconPosition='start' icon={<WarningAmberRoundedIcon  fontSize='medium' />} />
-                            <Tab label="Cancelados" iconPosition='start' icon={<CancelOutlinedIcon  fontSize='medium' />} />
+                            <Tab label="Completados" iconPosition='start' icon={<CheckCircleOutlineIcon fontSize='medium' />} />
+                            <Tab label="Advertencias" iconPosition='start' icon={<WarningAmberRoundedIcon fontSize='medium' />} />
+                            <Tab label="Cancelados" iconPosition='start' icon={<CancelOutlinedIcon fontSize='medium' />} />
                         </Tabs>
                     </Box>
                 </Box>

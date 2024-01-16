@@ -11,7 +11,7 @@ const CheckboxComponent = () => {
       mt={4}
       spacing={4}
     >
-      <HeaderComponents title="Chekcbox" />
+      <HeaderComponents title="Checkbox" />
       <Stack gap={1} width={"873px"}>
         <Typography variant="caption" color="text.secondary">
           Checkbox | Checked | Size: Large | Medium | Small

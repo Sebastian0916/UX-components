@@ -15,7 +15,7 @@ const IconButtonComponentomponent = () => {
       mt={4}
       spacing={4}
     >
-      <HeaderComponents title="Icon Button" />
+      <HeaderComponents title="Icon Button" link="button/#icon-button"/>
       <Box
         width={"873px"}
         flexDirection={"row"}

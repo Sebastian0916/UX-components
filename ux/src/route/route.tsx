@@ -10,7 +10,7 @@ import PopperAndPopover from "../components/PopperAndPopover";
 import StepperExample from "../components/Stepper";
 import { MenuC } from "../components/Menu";
 import { Autocomplete } from "../components/Autocomplete";
-import { BrowserRouter as Router, Route, Routes, Navigate } from "react-router-dom";
+import { Route, Routes, Navigate } from "react-router-dom";
 import { Button } from "../components/Button";
 import { IconButton } from "../components/IconButton";
 import { Fab } from "../components/Fab";
@@ -41,9 +41,6 @@ import { Card } from "../components/Card";
 import { Componentes } from "../components/Componentes";
 import BasicTabs from "../components/Tabs";
 import ModalExample from "../components/Modal";
-
-
-
 
 const Routers = () => {
   return (

@@ -1,11 +1,9 @@
 import React from "react";
-import { Box, FormControl, InputLabel, MenuItem, Stack, Typography } from "@mui/material";
+import { FormControl, InputLabel, MenuItem, Stack, Typography } from "@mui/material";
 import Select, { SelectChangeEvent } from '@mui/material/Select';
 import HeaderComponents from "./headerComponents";
 
 const SelectComponent = () => {
-
-    const VariantOptions = ["standard", "filled", "outlined"];
 
     const [age, setAge] = React.useState('');
 
@@ -27,7 +25,6 @@ const SelectComponent = () => {
                     <Typography variant='caption' color="text.secondary">Select | Variant: Standard | Filled | Outline | Size: Large | Medium | Small </Typography>
                 </Stack>
                 <Stack display="flex" flexDirection="row" width="100%" gap={1}>
-
                     <FormControl fullWidth size="small" variant="standard">
                         <InputLabel id="demo-simple-select-standard-label">Disabled</InputLabel>
                         <Select
@@ -52,6 +49,9 @@ const SelectComponent = () => {
                             id="demo-simple-select-filled"
                             value={age}
                             onChange={handleChange}
+                            MenuProps={{
+                                disablePortal: true
+                            }}
                         >
                             <MenuItem value="">
                                 <em>None</em>

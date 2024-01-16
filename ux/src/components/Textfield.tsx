@@ -11,7 +11,7 @@ const TextfieldComponent = () => {
       mt={4}
       spacing={4}
     >
-      <HeaderComponents title="TextField" />
+      <HeaderComponents title="TextField" link="text-field" />
       <Stack width={"873px"} spacing={2}>
         <Stack flexDirection={"row"} justifyContent={"space-between"}>
           <TextField

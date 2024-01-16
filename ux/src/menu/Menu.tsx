@@ -1,13 +1,8 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { Divider, MenuItem, MenuList, Paper, Stack } from "@mui/material";
+import {  MenuItem, MenuList, Paper, Stack } from "@mui/material";
 import menuData from "../data/menuData.json";
-import { palette } from "../Theme/palette";
-import { SincoTheme } from "../Theme";
-
-interface MenuProps {
-  setrouterPage: React.Dispatch<React.SetStateAction<string>>;
-}
+import { SincoTheme } from "@sinco/react";
 
 const Menu = () => {
   const [selectedItem, setSelectedItem] = useState<number | null>(null);
@@ -39,7 +34,7 @@ const Menu = () => {
                       borderRight: selectedItem === index ? `2px solid ${SincoTheme.palette.primary.main} ` : 'none',
                     }}
                     component={Link}
-                    to={`/${item.label.replace(/\s+/g, "")}`}
+                    to={`/${item.label.replace(/\s+/g, "").toLocaleLowerCase()}`}
                     onClick={() => handleMenuItemClick(index)}
                   >
                     {item.label}

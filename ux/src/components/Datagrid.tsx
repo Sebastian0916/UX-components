@@ -6,7 +6,7 @@ import TableRowsIcon from '@mui/icons-material/TableRows';
 import SaveAltIcon from '@mui/icons-material/SaveAlt';
 import FilterListIcon from '@mui/icons-material/FilterList';
 import HeaderComponents from './headerComponents';
-import { SincoTheme } from '../Theme';
+import { SincoTheme } from '@sinco/react';
 
 const estadoActivo = SincoTheme.palette.success[100];
 const estadoInactivo = SincoTheme.palette.warning[100];

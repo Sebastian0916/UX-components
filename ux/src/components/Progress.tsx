@@ -15,7 +15,7 @@ const ProgressComponent = () => {
       mt={4}
       spacing={4}
     >
-      <HeaderComponents title="Progreess" />
+      <HeaderComponents title="progress" />
       <Stack width={873} gap={1}>
         <Typography variant="caption" color="text.secondary">
           Progress Lineal | Type: Determinate | Buffer | Interminate
@@ -64,11 +64,6 @@ const ProgressComponent = () => {
             <CircularProgress color="success" variant="indeterminate" />
           </Stack>
         </Stack>
-      </Stack>
-      <Stack width={873} gap={1}>
-        <Typography variant="caption" color="text.secondary">
-          Button Progress | Type: Determinate | Buffer | Interminate
-        </Typography>
       </Stack>
     </Stack >
   );

@@ -19,7 +19,7 @@ const SpeedDialComponent = () => {
       mt={4}
       spacing={4}
     >
-      <HeaderComponents title="Speed Dial" />
+      <HeaderComponents title="Speed Dial" link="Speed-Dial" />
       <Stack width={873} gap={1}>
         <Typography variant="caption" color={"text.secondary"}>
           Speed Dial | Standard | Expanded

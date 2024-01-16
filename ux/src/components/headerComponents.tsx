@@ -1,19 +1,9 @@
 import React from "react";
-import { Box, Button, InputAdornment, Stack, TextField, Typography } from "@mui/material";
-import { Drawer } from "@sinco/react";
-import StarIcon from '@mui/icons-material/Star';
-import Visibility from '@mui/icons-material/Visibility';
-import CreditCardIcon from '@mui/icons-material/CreditCard';
-
-const HeaderComponents = ({ title }: { title: string }) => {
-
-  const [isOpen, setIsOpen] = React.useState(false);
-
-  const toggleDrawer = () => {
-    setIsOpen(!isOpen);
-  };
+import { Button, Stack, Typography } from "@mui/material";
 
 
+const HeaderComponents = ({ title, link }: { title: string, link?: string }) => {
+  const docsLink = link ? `https://mui.com/material-ui/react-${link?.toLocaleLowerCase()}/` : `https://mui.com/material-ui/react-${title?.toLocaleLowerCase()}/`
   return (
     <>
       <Stack
@@ -25,73 +15,15 @@ const HeaderComponents = ({ title }: { title: string }) => {
         p={1}
       >
         <Typography variant="h6">{title}</Typography>
-        <Button variant="outlined" color="primary" onClick={toggleDrawer}>
+        <Button
+          variant="outlined"
+          color="primary"
+          component="a"
+          href={docsLink}
+          target="_blank"
+        >
           Docs
         </Button>
-        <Drawer
-          open={isOpen}
-          onClose={toggleDrawer}
-          title='Nombre empresa'
-          color="text.primary"
-          width="35%"
-          anchorActions='flex-end'
-          anchor='right'
-          actions={
-            <>
-              <Box display="flex" gap={1.5}>
-                <Button color="primary" variant='outlined'>
-                  Cancelar
-                </Button>
-                <Button color="primary" variant='contained'>Confirmar</Button>
-              </Box>
-            </>
-          }
-        >
-          <Stack gap={1.5}>
-            <Typography textAlign="left" variant="h6" color="text.primary">
-              Details
-            </Typography>
-            <TextField
-              fullWidth
-              size="medium"
-              label="Label"
-              defaultValue="Card number"
-              InputProps={{
-                startAdornment: <InputAdornment position="start"> <CreditCardIcon fontSize='small' /></InputAdornment>,
-                endAdornment: <InputAdornment position="start"> <Visibility fontSize='small' /></InputAdornment>
-              }}
-            />
-            <TextField
-              fullWidth
-              size="medium"
-              label="Cardholder name"
-              defaultValue="John Doe"
-              InputProps={{
-                endAdornment: <InputAdornment position="start"> <Visibility fontSize='small' /></InputAdornment>
-              }}
-            />
-            <Stack gap={1} flexDirection="row">
-              <TextField
-                fullWidth
-                size="medium"
-                label="Expiration date"
-                defaultValue="MM / YY"
-                InputProps={{
-                  endAdornment: <InputAdornment position="start"> <Visibility fontSize='small' /></InputAdornment>
-                }}
-              />
-              <TextField
-                fullWidth
-                size="medium"
-                label="CVC / CVC2"
-                defaultValue=" "
-                InputProps={{
-                  endAdornment: <InputAdornment position="start"> <Visibility fontSize='small' /></InputAdornment>
-                }}
-              />
-            </Stack>
-          </Stack>
-        </Drawer>
       </Stack>
     </>
   );
