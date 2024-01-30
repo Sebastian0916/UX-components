@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import { Box, Button, Popover, Stack, Typography, Popper } from '@mui/material';
 import HeaderComponents from './headerComponents';
 

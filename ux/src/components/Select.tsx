@@ -25,7 +25,7 @@ const SelectComponent = () => {
                     <Typography variant='caption' color="text.secondary">Select | Variant: Standard | Filled | Outline | Size: Large | Medium | Small </Typography>
                 </Stack>
                 <Stack display="flex" flexDirection="row" width="100%" gap={1}>
-                    <FormControl fullWidth size="small" variant="standard">
+                    <FormControl fullWidth size="small" >
                         <InputLabel id="demo-simple-select-standard-label">Disabled</InputLabel>
                         <Select
                             labelId="demo-simple-select-standard-label"

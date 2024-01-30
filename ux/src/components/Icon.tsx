@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import { Stack, Typography,  Box } from '@mui/material';
 import HeaderComponents from './headerComponents';
 import { Star } from "@mui/icons-material";

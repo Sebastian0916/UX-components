@@ -1,9 +1,16 @@
 import React from 'react';
-import { render, screen } from '@testing-library/react';
+import { render } from '@testing-library/react';
 import App from './App';
 
-test('renders learn react link', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+jest.mock('./route/route', () => {
+  return () => <div data-testid="mocked-routers">Mocked Routers</div>;
+});
+
+test('renders App component with Routers', () => {
+  const { getByTestId } = render(<App />);
+
+  // eslint-disable-next-line testing-library/prefer-screen-queries
+  const routersElement = getByTestId('mocked-routers');
+
+  expect(routersElement).toBeInTheDocument();
 });

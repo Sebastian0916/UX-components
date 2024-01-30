@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import { DataGridPro, GridColDef, GridPagination, GridToolbarContainer, GridToolbarQuickFilter } from '@mui/x-data-grid-pro';
 import { Stack, Typography, Button, Box, Chip, Link } from '@mui/material';
 import ViewColumnIcon from '@mui/icons-material/ViewColumn';

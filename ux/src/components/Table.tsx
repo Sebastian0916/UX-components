@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import { SincoTheme } from '@sinco/react';
 import { Box, Button, Checkbox, Chip, Paper, Stack, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Typography, InputAdornment, TextField } from '@mui/material';
 import Visibility from '@mui/icons-material/Visibility';

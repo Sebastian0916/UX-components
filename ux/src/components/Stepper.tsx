@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import { Box, Stepper, Step, StepButton, Button, Typography, Stack } from '@mui/material';
 import HeaderComponents from './headerComponents';
 

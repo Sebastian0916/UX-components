@@ -8,7 +8,6 @@ type AlertType = {
 };
 
 const AlertComponent = () => {
-  const currentComponent = "alert"
 
   const filledAlerts: AlertType[] = [
     { variant: "filled", severity: "error" },

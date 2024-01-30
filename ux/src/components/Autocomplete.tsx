@@ -3,7 +3,6 @@ import React from "react";
 import HeaderComponents from "./headerComponents";
 
 const AutocompleteComponent = () => {
-  const currentComponent = "autocomplete"
 
   return (
     <Stack alignItems={"center"} ml={"240px"} justifyContent={"center"} mt={4} spacing={4}>

@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import { Tabs, Tab, Typography, Box, Stack } from '@mui/material';
 import WarningAmberRoundedIcon from '@mui/icons-material/WarningAmberRounded';
 import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline';
