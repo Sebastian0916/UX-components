@@ -28,21 +28,21 @@ const IconButtonComponentomponent = () => {
         </Typography>
         <Stack flexDirection={"row"} justifyContent={"space-between"}>
           {IconSmall.map((color) => (
-            <Box>
-              <IconButton color={color as any} key={color}>
+            <Box key={color}>
+              <IconButton color={color as any} >
                 <StarIcon fontSize="large" />
               </IconButton>
             </Box>
           ))}
           {IconMedium.map((color) => (
-            <Box>
+            <Box key={color}>
               <IconButton color={color as any} key={color}>
                 <StarIcon fontSize="medium" />
               </IconButton>
             </Box>
           ))}
           {IconLarge.map((color) => (
-            <Box>
+            <Box key={color}>
               <IconButton color={color as any} key={color}>
                 <StarIcon fontSize="small" />
               </IconButton>

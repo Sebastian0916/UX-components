@@ -62,6 +62,7 @@ const TableBasic = () => {
                     <Box>
                         {[1, 2].map((element) => (
                             <TextField
+                                key={element}
                                 size="medium"
                                 label="Label"
                                 defaultValue="Value"
@@ -127,6 +128,7 @@ const TableBasic = () => {
                     <Box>
                         {[1, 2].map((element) => (
                             <TextField
+                                key={element}
                                 size="small"
                                 defaultValue="Value"
                                 label="Label"

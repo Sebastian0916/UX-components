@@ -21,11 +21,11 @@ const BadgeComponent = () => {
                 </Typography>
             </Stack>
             <Stack width={"873px"} flexDirection="row" alignItems="center" justifyContent="space-between" >
-                {badgeColorOptions.map((element, index) => (
+                {badgeColorOptions.map((element: any, index) => (
                     <Badge
-                        key={element}
+                        key={index}
                         badgeContent={"2"}
-                        color={element as any}
+                        color={element}
                         sx={{
                             bgcolor: { element },
                         }}
@@ -41,7 +41,7 @@ const BadgeComponent = () => {
                 {badgeColorOptions.map((element, index) => (
                     <Badge
                         variant="dot"
-                        key={element}
+                        key={index}
                         color={element as any}
                         sx={{
                             bgcolor: { element },
@@ -56,10 +56,10 @@ const BadgeComponent = () => {
             </Stack>
             <Stack width={"873px"} flexDirection="row" alignItems="center" justifyContent="space-between" >
                 {badgeColorOptions.map((element, index) => (
-                    <IconButton>
+                    <IconButton key={index}
+                    >
                         <Badge
                             variant="dot"
-                            key={element}
                             color={element as any}
                             sx={{
                                 bgcolor: { element },

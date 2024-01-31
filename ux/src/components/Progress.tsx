@@ -7,6 +7,8 @@ import {
 } from "@mui/material";
 import HeaderComponents from "./headerComponents";
 const ProgressComponent = () => {
+  const progressValue = 50;
+  const bufferValue = 70;
   return (
     <Stack
       alignItems={"center"}
@@ -27,6 +29,7 @@ const ProgressComponent = () => {
             justifyContent={"space-between"}
           >
             <LinearProgress
+              value={progressValue}
               variant="determinate"
               sx={{ width: 180 }}
               color="secondary"
@@ -35,6 +38,8 @@ const ProgressComponent = () => {
               variant="buffer"
               sx={{ width: 180 }}
               color="success"
+              value={progressValue}
+              valueBuffer={bufferValue}
             />
             <LinearProgress
               variant="indeterminate"

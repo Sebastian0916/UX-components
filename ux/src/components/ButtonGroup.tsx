@@ -64,7 +64,7 @@ const ButtonGroupComponent = () => {
             >
               <Button>{color}</Button>
               <Button>
-                <ArrowDropDownIcon fontSize="medium" />{" "}
+                <ArrowDropDownIcon fontSize="medium" />
               </Button>
             </ButtonGroup>
           ))}
