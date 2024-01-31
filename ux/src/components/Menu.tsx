@@ -70,7 +70,7 @@ const MenuComponent = () => {
                 anchor="left"
                 actions={
                   <>
-                    <Box display="flex">
+                    <Box display="flex" gap={1}>
                       <Button color="primary" variant="outlined">
                         Aceptar
                       </Button>

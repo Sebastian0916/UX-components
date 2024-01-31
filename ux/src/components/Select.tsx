@@ -22,61 +22,45 @@ const SelectComponent = () => {
             <Stack gap={1}>
                 <HeaderComponents title="Select" />
                 <Stack display="flex" gap={4}>
-                    <Typography variant='caption' color="text.secondary">Select | Variant: Standard | Filled | Outline | Size: Large | Medium | Small </Typography>
+                    <Typography variant='caption' color="text.secondary">Select | Variant: Standard | Filled | Outline | Medium | Small </Typography>
                 </Stack>
-                <Stack display="flex" flexDirection="row" width="100%" gap={1}>
-                    <FormControl fullWidth size="small" >
-                        <InputLabel id="demo-simple-select-standard-label">Disabled</InputLabel>
+                <Stack display="flex" flexDirection="row" gap={2}>
+                    <FormControl fullWidth size="small" variant="standard">
+                        <InputLabel>Standard</InputLabel>
                         <Select
-                            labelId="demo-simple-select-standard-label"
-                            id="demo-simple-select-standard"
                             value={age}
                             onChange={handleChange}
                             label="Standard"
                         >
-                            <MenuItem value="">
-                                <em>None</em>
-                            </MenuItem>
                             <MenuItem value={10}>Ten</MenuItem>
                             <MenuItem value={20}>Twenty</MenuItem>
                             <MenuItem value={30}>Thirty</MenuItem>
                         </Select>
                     </FormControl>
                     <FormControl fullWidth size="medium" variant="filled">
-                        <InputLabel id="demo-simple-select-filled-label">Disabled</InputLabel>
+                        <InputLabel >Filled</InputLabel>
                         <Select
-                            labelId="demo-simple-select-filled-label"
-                            id="demo-simple-select-filled"
                             value={age}
                             onChange={handleChange}
-                            MenuProps={{
-                                disablePortal: true
-                            }}
-                        >
-                            <MenuItem value="">
-                                <em>None</em>
-                            </MenuItem>
-                            <MenuItem value={10}>Ten</MenuItem>
-                            <MenuItem value={20}>Twenty</MenuItem>
-                            <MenuItem value={30}>Thirty</MenuItem>
-                        </Select>
-                    </FormControl>
-                    <FormControl fullWidth size="medium" >
-                        <InputLabel id="demo-simple-select-label">Disabled</InputLabel>
-                        <Select
-                            labelId="demo-simple-select-label"
-                            id="demo-simple-select"
-                            value={age}
-                            label="Disabled"
-                            autoWidth
-                            onChange={handleChange}
+                            label="filled"
                         >
                             <MenuItem value={10}>Ten</MenuItem>
                             <MenuItem value={20}>Twenty</MenuItem>
                             <MenuItem value={30}>Thirty</MenuItem>
                         </Select>
                     </FormControl>
-
+                    <FormControl fullWidth size="medium" variant="outlined">
+                        <InputLabel >Outlined</InputLabel>
+                        <Select
+                            value={age}
+                            onChange={handleChange}
+                            label="outlined"
+                        >
+                            <MenuItem value={10}>Ten</MenuItem>
+                            <MenuItem value={20}>Twenty</MenuItem>
+                            <MenuItem value={30}>Thirty</MenuItem>
+                        </Select>
+                    </FormControl>
                 </Stack>
             </Stack>
         </Stack>

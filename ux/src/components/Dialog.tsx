@@ -90,7 +90,7 @@ const DialogComponent = () => {
           </DialogContent>
           <DialogActions>
             <Button onClick={handleClose} size="small">
-              Cancerlar
+              Cancelar
             </Button>
             <Button onClick={handleClose} variant="contained" size="small">
               Confirmar
