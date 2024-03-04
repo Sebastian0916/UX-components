@@ -41,6 +41,9 @@ import { Card } from "../components/Card";
 import { Componentes } from "../components/Componentes";
 import BasicTabs from "../components/Tabs";
 import ModalExample from "../components/Modal";
+import { Icons } from "../components/Icons";
+import { ProgressSinco } from "../components/ProgressSinco";
+import { Stack } from "@mui/material";
 
 const Routers = () => {
   return (
@@ -88,6 +91,12 @@ const Routers = () => {
         <Route path="/ToastNotification" element={<ToastNotification />} />
         <Route path="/PageHeader" element={<PageHeader />} />
         <Route path="/FooterActions" element={<FooterActionExample />} />
+        <Route
+          path="/ProgresSinco"
+          element={
+            <ProgressSinco variant="indeterminate" lote={5} time={100} />
+          }
+        />
       </Routes>
     </>
   );

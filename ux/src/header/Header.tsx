@@ -1,8 +1,8 @@
 import React from "react";
 import { Stack, Typography } from "@mui/material";
-import react from "../react.svg";
-import figma from "../figma.svg";
-import sinco from "../SINCO logos.svg";
+import react from "../assets/react.svg";
+import figma from "../assets/figma.svg";
+import sinco from "../assets/SINCO logos.svg";
 
 const Header = () => {
   return (

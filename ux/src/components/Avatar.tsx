@@ -1,7 +1,7 @@
 import { Avatar, AvatarGroup, Stack, Typography } from "@mui/material";
 import HeaderComponents from "./headerComponents";
 import { Person } from "@mui/icons-material";
-import React from "../react.svg";
+import React from "../assets/react.svg";
 const AvatarComponent = () => {
   return (
     <Stack
