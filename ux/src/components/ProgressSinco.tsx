@@ -1,7 +1,6 @@
 import React, { FC, useEffect, useState } from "react";
-import { SincoTheme } from "@sinco/react";
 import { LinearProgress, Stack, Typography } from "@mui/material";
-import spinnerSinco from "../assets/SpinnerSincoERP.gif";
+import { SincoTheme } from "@sinco/react";
 import { useProgress } from "../Hooks/useProgress";
 
 type Variant = "buffer" | "determinate" | "indeterminate" | "query" | "lote";
@@ -21,59 +20,69 @@ export const ProgressSinco: FC<ProgressProps> = ({
 }) => {
   const timeProgress = time || 10;
   const [showToast, setShowToast] = useState<boolean>(true);
-  const { progressToast } = useProgress(timeProgress, lote);
+  const { progress } = useProgress(timeProgress, lote);
 
   useEffect(() => {
-    if (progressToast >= 100) {
+    if (progress >= 100) {
       setShowToast(false);
     }
-  }, [progressToast]);
+  }, [progress]);
 
   return (
-    <Stack
-      position={"fixed"}
-      zIndex={1000}
-      height={"100%"}
-      width={"100%"}
-      alignItems={"center"}
-      justifyContent={"center"}
-    >
+    <>
       {showToast && (
         <Stack
-          width={226}
-          gap={0.8}
-          justifyContent={"center"}
+          position={"fixed"}
+          zIndex={1000}
+          height={"100%"}
+          width={"100%"}
           alignItems={"center"}
+          justifyContent={"center"}
         >
-          <Stack width={300} height={60} justifyContent={"center"}>
-            <img src={spinnerSinco} alt="logo" />
-          </Stack>
-          <Typography variant="body2" color={"text.secondary"}>
-            Progresando...
-          </Typography>
-          <LinearProgress
-            value={progressToast}
-            variant={variant === "lote" ? "determinate" : variant}
-            valueBuffer={valueBuffer}
-            color="primary"
-            sx={{
-              backgroundColor: SincoTheme.palette.primary[50],
-              clipPath: "polygon(5% 0, 100% 0, 95% 100%, 0 100%)",
-              height: 10,
-              width: 226,
-              ".MuiLinearProgress-dashed": {
-                top: variant === "buffer" ? 2.5 : 0,
-              },
-              ".MuiLinearProgress-bar": {
+          <Stack
+            width={226}
+            gap={0.8}
+            justifyContent={"center"}
+            alignItems={"center"}
+          >
+            <Stack width={60} height={60} justifyContent={"center"}>
+              <svg width="60" height="60" viewBox="0 0 100 100">
+                <symbol id="spinner" viewBox="0 0 91 60">
+                  <path id="path1" d="M16.8395 59.9966L34.0333 41.8759L23.6316 19.7821L0.100342 19.845L16.8395 59.9966Z" fill="#0C4271"/>
+                  <path id="path2" d="M0 18.1417H54.2501L69.5867 0L13.9796 0.160958L0 18.1417Z" fill="#3872A9"/>
+                  <path id="path3" d="M90.177 41.0402L71.8396 0.0457764L55.4082 19.2962L65.6909 41.0332L90.177 41.0402Z" fill="#2063A0"/>
+                  <path id="path4" d="M35.4515 42.6838L19.1216 59.9965L76.425 60L90.1772 42.6838H35.4515Z" fill="#4E91C3"/>
+                </symbol>
+                <use xlinkHref="#spinner" />
+              </svg>
+            </Stack>
+            <Typography variant="body2" color={"text.secondary"}>
+              Progresando...
+            </Typography>
+            <LinearProgress
+              value={progress}
+              variant={variant === "lote" ? "determinate" : variant}
+              valueBuffer={valueBuffer}
+              color="primary"
+              sx={{
+                backgroundColor: SincoTheme.palette.primary[50],
                 clipPath: "polygon(5% 0, 100% 0, 95% 100%, 0 100%)",
-              },
-            }}
-          />
-          <Typography color={"text.secondary"} variant="subtitle2">
-            {`${progressToast}%`}
-          </Typography>
+                height: 10,
+                width: 226,
+                ".MuiLinearProgress-dashed": {
+                  top: variant === "buffer" ? 2.5 : 0,
+                },
+                ".MuiLinearProgress-bar": {
+                  clipPath: "polygon(5% 0, 100% 0, 95% 100%, 0 100%)",
+                },
+              }}
+            />
+            <Typography color={"text.secondary"} variant="subtitle2">
+              {`${progress}%`}
+            </Typography>
+          </Stack>
         </Stack>
       )}
-    </Stack>
+    </>
   );
 };

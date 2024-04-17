@@ -17,7 +17,9 @@ const ChipComponent = () => {
     SincoTheme.palette.info[100],
     SincoTheme.palette.success[100],
   ];
-
+  const handleClick = () => {
+    console.info("You clicked the Chip.");
+  };
   return (
     <Stack
       alignItems="center"
@@ -37,14 +39,45 @@ const ChipComponent = () => {
           width={873}
           justifyContent={"space-between"}
         >
-          {chipColors.map((color, index) => (
-            <Chip
-              key={index}
-              label="Chip"
-              onDelete={handleDelete}
-              sx={{ backgroundColor: color }}
-            />
-          ))}
+          <Chip
+            onClick={handleClick}
+            color="primary"
+            label="Chip"
+            onDelete={handleDelete}
+            size="small"
+          />
+          <Chip
+            color="secondary"
+            label="Chip"
+            onDelete={handleDelete}
+            size="small"
+          />
+          <Chip
+            color="error"
+            label="Chip"
+            onDelete={handleDelete}
+            size="small"
+          />
+          <Chip
+            color="success"
+            label="Chip"
+            onDelete={handleDelete}
+            size="small"
+          />
+          <Chip
+            color="warning"
+            label="Chip"
+            onDelete={handleDelete}
+            size="small"
+          />
+          <Chip
+            color="info"
+            label="Chip"
+            onDelete={handleDelete}
+            size="small"
+          />
+          {/* {chipColors.map((color, index) => (
+          ))} */}
           <Chip label="Chip disabled" onDelete={handleDelete} disabled />
         </Stack>
       </Stack>

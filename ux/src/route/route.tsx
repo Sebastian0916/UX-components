@@ -41,9 +41,10 @@ import { Card } from "../components/Card";
 import { Componentes } from "../components/Componentes";
 import BasicTabs from "../components/Tabs";
 import ModalExample from "../components/Modal";
-import { Icons } from "../components/Icons";
-import { ProgressSinco } from "../components/ProgressSinco";
-import { Stack } from "@mui/material";
+import SvgPrueba from "../assets/react.svg";
+// import { ProgressSinco } from "../components/ProgressSinco";
+import { ProgressSinco } from "@sinco/react";
+import { CardRadio } from "../components/CardRadio";
 
 const Routers = () => {
   return (
@@ -91,10 +92,36 @@ const Routers = () => {
         <Route path="/ToastNotification" element={<ToastNotification />} />
         <Route path="/PageHeader" element={<PageHeader />} />
         <Route path="/FooterActions" element={<FooterActionExample />} />
+        <Route path="/ProgresSinco" element={<ProgressSinco time={3000} />} />
         <Route
-          path="/ProgresSinco"
+          path="/CardRadio"
           element={
-            <ProgressSinco variant="indeterminate" lote={5} time={100} />
+            <>
+              <CardRadio
+                slotMedia={<img src={SvgPrueba} alt="a" />}
+                RadioPosition="right"
+                slotContent="Contenido CardRadio"
+                slotHeader="Contenido Titulo"
+                heightPosition="top"
+                states="disabled"
+              />
+              <CardRadio
+                slotMedia={<img src={SvgPrueba} alt="a" />}
+                RadioPosition="left"
+                slotContent="Contenido CardRadio"
+                slotHeader="Contenido Titulo"
+                heightPosition="top"
+              />
+              <CardRadio
+                // slotMedia={<img src={SvgPrueba} alt="a" />}
+                RadioPosition="left"
+                slotContent="Contenido CardRadio"
+                slotHeader="Contenido Titulo"
+                states="active"
+                heightPosition="center"
+                
+              />
+            </>
           }
         />
       </Routes>

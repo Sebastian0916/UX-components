@@ -10,7 +10,7 @@ const ToastNotificationComponent = () => {
     setOpenToast(true);
     setTimeout(() => {
       setOpenToast(false);
-    }, 500); 
+    }, 50000); 
   }
 
   return (
@@ -28,7 +28,7 @@ const ToastNotificationComponent = () => {
         <ToastNotification
           title="¡Aviso importante!"
           subtitle="Subtitle"
-          time={1000}
+          time={100}
           dataOpt={["option", "option", "option"]}
           seeMore={true}
           actions={

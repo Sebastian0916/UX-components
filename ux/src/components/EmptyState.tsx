@@ -16,7 +16,7 @@ const EmptyStateComponent = () => {
       <HeaderComponents title="EmptyState" />
       <Stack width={873}>
         <EmptyState
-        state="create"
+        state="search"
         title="No se encontraron reultados"
         subtitle="Intenta ajustar la buscqueda [o flitro/s] para obtener el contenido que deseas"
         actions={

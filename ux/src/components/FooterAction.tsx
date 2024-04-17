@@ -39,17 +39,9 @@ export const FooterActionExample = () => {
         {isFooterActionVisible && (
           <FooterAction
             labelChangeCounter={
-              <Typography color="text.secondary" variant="body2" display="flex">
-                Cambiaste
-                <Typography
-                  color="text.secondary"
-                  variant="body2"
-                  sx={{ fontWeight: "bold", px: "2px" }}
-                >
-                  X
-                </Typography>
-                Campos de información
-              </Typography>
+              <>
+                <Typography variant="body2">Texto prueba</Typography>
+              </>
             }
             leftContent={
               <>
