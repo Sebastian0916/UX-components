@@ -9,12 +9,6 @@ import {
 } from "@mui/icons-material";
 
 export const components: Components = {
-  MuiPopper: {
-    defaultProps: {
-      placement: "top",
-    },
-    styleOverrides: {},
-  },
   MuiSelect: {
     styleOverrides: {
       icon: {
@@ -212,14 +206,28 @@ export const components: Components = {
       },
     },
   },
-  MuiDialogContent: {
+  MuiDialogTitle: {
     styleOverrides: {
       root: {
-        paddingTop: "8px !important",
-        paddingBottom: "8px",
+        padding: "8px 16px !important",
       },
     },
   },
+  MuiDialogContent: {
+    styleOverrides: {
+      root: {
+        padding: "8px 16px !important",
+      },
+    },
+  },
+  MuiDialogActions: {
+    styleOverrides: {
+      root: {
+        padding: "12px 16px !important",
+      },
+    },
+  },
+
   MuiCheckbox: {
     variants: [
       {
@@ -266,69 +274,38 @@ export const components: Components = {
       },
     },
   },
-  // MuiChip: {
-  //   styleOverrides: {
-  //     deleteIcon: {
-  //       color: SincoTheme.palette.action.disabled,
-  //       "&:hover": {
-  //         color: SincoTheme.palette.action.active,
-  //       },
-  //       "&:active": {
-  //         color: SincoTheme.palette.action.active,
-  //       },
-  //     },
-  //     colorPrimary: {
-  //       backgroundColor: SincoTheme.palette.primary[100],
-  //     },
-  //     colorSecondary: {
-  //       backgroundColor: SincoTheme.palette.secondary[100],
-  //     },
-  //     colorError: {
-  //       backgroundColor: SincoTheme.palette.error[100],
-  //     },
-  //     colorWarning: {
-  //       backgroundColor: SincoTheme.palette.warning[100],
-  //     },
-  //     colorInfo: {
-  //       backgroundColor: SincoTheme.palette.info[100],
-  //     },
-  //     colorSuccess: {
-  //       backgroundColor: SincoTheme.palette.success[100],
-  //     },
-  //     sizeSmall: {
-  //       height: 16,
-  //     },
-  //     sizeMedium: {
-  //       height: 20,
-  //     },
-  //     icon: {
-  //       color: palette.action?.active,
-  //       opacity: "70%",
-  //     },
-  //     root: {
-  //       color: SincoTheme.palette.text.primary,
-  //       fontFamily: "Roboto",
-  //       fontSize: "11px",
-  //       fontWeight: 400,
-  //       lineHeight: "14px",
-  //       letterSpacing: "0.16px",
-  //       height: "inherit",
-  //       borderRadius: 4,
-  //       ".MuiChip-deleteIconXsmall": {
-  //         height: 12,
-  //         width: 12,
-  //       },
-  //       ".MuiChip-deleteIconSmall": {
-  //         height: 16,
-  //         width: 16,
-  //       },
-  //       ".MuiChip-deleteIconMedium": {
-  //         height: 20,
-  //         widht: 20,
-  //       },
-  //     },
-  //   },
-  // },
+  MuiChip: {
+    styleOverrides: {
+      sizeSmall: {
+        height: 16,
+      },
+      sizeMedium: {
+        height: 20,
+      },
+
+      root: {
+        fontFamily: "Roboto",
+        fontSize: "11px",
+        fontWeight: 400,
+        lineHeight: "14px",
+        letterSpacing: "0.16px",
+        height: "inherit",
+        borderRadius: 4,
+        ".MuiChip-deleteIconXsmall": {
+          height: 12,
+          width: 12,
+        },
+        ".MuiChip-deleteIconSmall": {
+          height: 16,
+          width: 16,
+        },
+        ".MuiChip-deleteIconMedium": {
+          height: 20,
+          width: 20,
+        },
+      },
+    },
+  },
   MuiAlert: {
     defaultProps: {
       iconMapping: {
@@ -613,10 +590,10 @@ export const components: Components = {
       },
       outlined: {
         "&.MuiInputLabel-outlined.MuiInputLabel-sizeSmall ": {
-          transform: "translate(14px,9px) scale(1)",
+          transform: "translate(14px,7px) scale(1)",
         },
         "&.MuiInputLabel-outlined ": {
-          transform: "translate(14px, 15px) scale(1)",
+          transform: "translate(14px, 14px) scale(1)",
 
           "&.MuiInputLabel-shrink": {
             transform: "translate(14px, -7px) scale(0.75)",

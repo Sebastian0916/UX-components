@@ -3,31 +3,31 @@
 }
 
 #path2 {
-  animation: spin 3s linear infinite 0.2s; 
+  animation: spin 3s linear infinite 0.2s;
 }
 
 #path3 {
-  animation: spin 3s linear infinite 0.7s; 
+  animation: spin 3s linear infinite 0.7s;
 }
 
 #path4 {
-  animation: spin 3s linear infinite 1.2s; 
+  animation: spin 3s linear infinite 1.2s;
 }
 
 @keyframes spin {
   0% {
-    opacity: 1; 
+    opacity: 1;
   }
   25% {
-    opacity: 0; 
+    opacity: 0;
   }
   50% {
-    opacity: 1; 
+    opacity: 1;
   }
   75% {
-    opacity: 0; 
+    opacity: 0;
   }
   100% {
-    opacity: 1; 
+    opacity: 1;
   }
 }

@@ -1,11 +1,13 @@
 import { Radio, Stack, Typography } from "@mui/material";
-import React, { FC, useState } from "react";
+import React, { FC, useEffect, useState } from "react";
 import HeaderComponents from "./headerComponents";
 import { SincoTheme } from "@sinco/react";
+import { RadioPropsColorOverrides } from "@mui/material";
 
 type RadioPosition = "left" | "right";
 type RadioStates = "active" | "disabled";
 type RadioHeightPosition = "top" | "center";
+type RadioColors = "primary" | "secondary";
 
 export interface CardRadioProps {
   RadioPosition?: RadioPosition;
@@ -14,6 +16,10 @@ export interface CardRadioProps {
   slotMedia?: React.ReactNode;
   slotHeader?: React.ReactNode | string;
   slotContent?: React.ReactNode | string;
+  color?: RadioColors;
+  onChange: (value: string | number) => void;
+  value: string | number;
+  checked?: boolean;
 }
 
 export const CardRadio: FC<CardRadioProps> = ({
@@ -23,15 +29,50 @@ export const CardRadio: FC<CardRadioProps> = ({
   slotHeader,
   slotContent,
   heightPosition = "top",
+  color = "primary",
+  value,
+  onChange,
+  checked,
 }) => {
-  const [isChecked, setIsChecked] = useState(states === "active");
-  const [isActive, setIsActive] = useState(states === "active");
+  const [isChecked, setIsChecked] = useState(checked ?? false);
+  const [isActive] = useState(states === "active");
 
   const handleClick = () => {
     if (states === "disabled") return;
     setIsChecked(!isChecked);
-    setIsActive(!isActive);
+    onChange(value);
   };
+
+  const getBackgroundColor = () => {
+    if (states === "disabled") return "";
+    return isChecked
+      ? color === "primary"
+        ? "#E4ECF4"
+        : color === "secondary"
+        ? "#00BCD414"
+        : "#FBFBFB"
+      : "transparent";
+  };
+
+  const getBorderColor = () => {
+    return isChecked
+      ? color === "primary"
+        ? "#2063A080"
+        : color === "secondary"
+        ? "#00BCD480"
+        : "#00BCD4"
+      : "#0000001F";
+  };
+  const getHoverColor = () => {
+    return color === "primary"
+      ? "#2063A00A"
+      : color === "secondary"
+      ? "#00BCD40A"
+      : "FBFBFB";
+  };
+  useEffect(() => {
+    if (checked !== undefined) setIsChecked(checked);
+  }, [checked]);
 
   return (
     <>
@@ -53,17 +94,14 @@ export const CardRadio: FC<CardRadioProps> = ({
               <Stack
                 padding={"8px 16px"}
                 borderRadius={1}
+                border={`solid 1px ${getBorderColor()}`}
                 sx={{
-                  border: isActive
-                    ? "solid 1px #2063A0"
-                    : "solid 1px #0000001F",
                   "&:hover": {
-                    backgroundColor:
-                      isActive || states === "disabled" ? "none" : "#2063A00A",
-                  },
+                    backgroundColor: checked ? "none" : states === "disabled" ? "inherit" : getHoverColor(),
+                  },                  
                   cursor: "pointer",
                 }}
-                bgcolor={isActive ? SincoTheme.palette.primary[50] : ""}
+                bgcolor={getBackgroundColor()}
                 onClick={handleClick}
               >
                 <Stack
@@ -113,7 +151,7 @@ export const CardRadio: FC<CardRadioProps> = ({
                   >
                     <Radio
                       checked={isChecked}
-                      color={"primary"}
+                      color={color}
                       disabled={states === "disabled"}
                     />
                   </Stack>

@@ -34,7 +34,8 @@ import { ToastNotification } from "./ToastNotification";
 import { FooterActionExample } from "./FooterAction";
 import { PageHeader } from "./PageHeader";
 import Icons from "./Icons";
-// import { ProgresSinco } from "./ProgressSinco";
+import { CardRadio } from "@sinco/react";
+import { ProgressSinco } from "./ProgressSinco";
 
 export const Componentes = () => {
   return (
@@ -86,11 +87,10 @@ export const Componentes = () => {
         Size Ilustración: small | medium | large
       </Typography>
       <Stack flexDirection={"row"} alignItems={" center"} gap={8}>
-        <Icons iconName="sinco-access" size="large" />
-        <Icons iconName="sinco-approve" size="large" />
-        <Icons iconName="sinco-ticket" size="large" />
+        <Icons iconName="sinco-access" size="large" />{" "}
       </Stack>
-      {/* <ProgresSinco /> */}
+      <ProgressSinco time={1000} />
+      <CardRadio />
     </Stack>
   );
 };

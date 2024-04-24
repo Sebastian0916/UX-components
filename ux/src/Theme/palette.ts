@@ -1,6 +1,5 @@
 import { PaletteOptions } from "@mui/material";
 
-
 export const palette: PaletteOptions = {
   primary: {
     50: "#E4ECF4",

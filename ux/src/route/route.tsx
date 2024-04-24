@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Menu from "../menu/Menu";
 import Header from "../header/Header";
 import Icon from "../components/Icon";
@@ -47,10 +47,11 @@ import { ProgressSinco } from "@sinco/react";
 import { CardRadio } from "../components/CardRadio";
 
 const Routers = () => {
+  const [prueba, setPrueba] = useState(1);
   return (
     <>
-      <Header />
-      <Menu />
+      {/* <Header />
+      <Menu /> */}
       <Routes>
         <Route path="/" element={<Navigate to="/Componentes" />} />
         <Route path="/Componentes" element={<Componentes />} />
@@ -92,34 +93,45 @@ const Routers = () => {
         <Route path="/ToastNotification" element={<ToastNotification />} />
         <Route path="/PageHeader" element={<PageHeader />} />
         <Route path="/FooterActions" element={<FooterActionExample />} />
-        <Route path="/ProgresSinco" element={<ProgressSinco time={3000} />} />
+        <Route
+          path="/ProgresSinco"
+          element={<ProgressSinco time={3000} lote={5} />}
+        />
         <Route
           path="/CardRadio"
           element={
             <>
               <CardRadio
+                onChange={(value) => setPrueba(value as number)}
+                value={0}
+                slotMedia={<img src={SvgPrueba} alt="a" />}
+                RadioPosition="left"
+                slotContent="Contenido CardRadio"
+                slotHeader="Contenido Titulo"
+                heightPosition="top"
+                checked={prueba === 0}
+                color="secondary"
+                // states="disabled"
+              />
+              <CardRadio
+                onChange={(value) => setPrueba(value as number)}
+                value={1}
                 slotMedia={<img src={SvgPrueba} alt="a" />}
                 RadioPosition="right"
                 slotContent="Contenido CardRadio"
                 slotHeader="Contenido Titulo"
                 heightPosition="top"
-                states="disabled"
+                checked={prueba === 1}
               />
               <CardRadio
+                checked={prueba === 2}
+                onChange={(value) => setPrueba(value as number)}
+                value={2}
                 slotMedia={<img src={SvgPrueba} alt="a" />}
-                RadioPosition="left"
+                RadioPosition="right"
                 slotContent="Contenido CardRadio"
                 slotHeader="Contenido Titulo"
                 heightPosition="top"
-              />
-              <CardRadio
-                // slotMedia={<img src={SvgPrueba} alt="a" />}
-                RadioPosition="left"
-                slotContent="Contenido CardRadio"
-                slotHeader="Contenido Titulo"
-                states="active"
-                heightPosition="center"
-                
               />
             </>
           }
