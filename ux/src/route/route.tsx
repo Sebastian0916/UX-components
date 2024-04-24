@@ -50,8 +50,8 @@ const Routers = () => {
   const [prueba, setPrueba] = useState(1);
   return (
     <>
-      {/* <Header />
-      <Menu /> */}
+      <Header />
+      <Menu />
       <Routes>
         <Route path="/" element={<Navigate to="/Componentes" />} />
         <Route path="/Componentes" element={<Componentes />} />
