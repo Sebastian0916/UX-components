@@ -8,6 +8,7 @@ import {
   IconButton,
   TextField,
   InputAdornment,
+  Paper,
 } from "@mui/material";
 import React from "react";
 import HeaderComponents from "./headerComponents";
@@ -37,65 +38,67 @@ const DialogComponent = () => {
           DIALOG
         </Button>
         <Dialog fullWidth open={open} onClose={handleClose}>
-          <DialogTitle
-            sx={{
-              display: "flex",
-              justifyContent: "space-between",
-            }}
-          >
-            {"Confirmación de pago"}
-            <IconButton>
-              <Close />
-            </IconButton>
-          </DialogTitle>
-          <DialogContent>
-            <Stack gap={1}>
-              <TextField
-                fullWidth
-                label="Card number"
-                InputProps={{
-                  startAdornment: (
-                    <InputAdornment position="start">
-                      <CreditCard />
-                    </InputAdornment>
-                  ),
-                }}
-              />
-              <TextField fullWidth label="Cardholder name" />
-              <Stack flexDirection={"row"} gap={1}>
+          <Paper elevation={2}>
+            <DialogTitle
+              sx={{
+                display: "flex",
+                justifyContent: "space-between",
+              }}
+            >
+              {"Confirmación de pago"}
+              <IconButton>
+                <Close />
+              </IconButton>
+            </DialogTitle>
+            <DialogContent>
+              <Stack gap={1}>
                 <TextField
                   fullWidth
-                  label="Expiration date"
+                  label="Card number"
                   InputProps={{
-                    endAdornment: (
+                    startAdornment: (
                       <InputAdornment position="start">
-                        <RemoveRedEye />
+                        <CreditCard />
                       </InputAdornment>
                     ),
                   }}
                 />
-                <TextField
-                  fullWidth
-                  label="CVC / CVC2"
-                  InputProps={{
-                    endAdornment: (
-                      <InputAdornment position="start">
-                        <RemoveRedEye />
-                      </InputAdornment>
-                    ),
-                  }}
-                />
+                <TextField fullWidth label="Cardholder name" />
+                <Stack flexDirection={"row"} gap={1}>
+                  <TextField
+                    fullWidth
+                    label="Expiration date"
+                    InputProps={{
+                      endAdornment: (
+                        <InputAdornment position="start">
+                          <RemoveRedEye />
+                        </InputAdornment>
+                      ),
+                    }}
+                  />
+                  <TextField
+                    fullWidth
+                    label="CVC / CVC2"
+                    InputProps={{
+                      endAdornment: (
+                        <InputAdornment position="start">
+                          <RemoveRedEye />
+                        </InputAdornment>
+                      ),
+                    }}
+                  />
+                </Stack>
               </Stack>
-            </Stack>
-          </DialogContent>
-          <DialogActions>
-            <Button onClick={handleClose} size="small">
-              Cancelar
-            </Button>
-            <Button onClick={handleClose} variant="contained" size="small">
-              Confirmar
-            </Button>
-          </DialogActions>
+            </DialogContent>
+            <DialogActions>
+              <Button onClick={handleClose} size="small">
+                Cancelar
+              </Button>
+              <Button onClick={handleClose} variant="contained" size="small">
+                Confirmar
+              </Button>
+            </DialogActions>
+          </Paper>
         </Dialog>
       </Stack>
     </Stack>
