@@ -35,7 +35,7 @@ import { FooterActionExample } from "./FooterAction";
 import { PageHeader } from "./PageHeader";
 import Icons from "./Icons";
 import { CardRadio } from "@sinco/react";
-import { ProgressSinco } from "./ProgressSinco";
+import { ProgressSincoPrueba } from "./ProgressSinco";
 
 export const Componentes = () => {
   return (
@@ -89,8 +89,13 @@ export const Componentes = () => {
       <Stack flexDirection={"row"} alignItems={" center"} gap={8}>
         <Icons iconName="sinco-access" size="large" />{" "}
       </Stack>
-      <ProgressSinco time={1000} />
-      <CardRadio />
+      <ProgressSincoPrueba />
+      <CardRadio
+        onChange={function (value: string | number): void {
+          throw new Error("Function not implemented.");
+        }}
+        value={""}
+      />
     </Stack>
   );
 };

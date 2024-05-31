@@ -42,9 +42,8 @@ import { Componentes } from "../components/Componentes";
 import BasicTabs from "../components/Tabs";
 import ModalExample from "../components/Modal";
 import SvgPrueba from "../assets/react.svg";
-// import { ProgressSinco } from "../components/ProgressSinco";
-import { ProgressSinco } from "@sinco/react";
 import { CardRadio } from "../components/CardRadio";
+import { ProgressSincoPrueba } from "../components/ProgressSinco";
 
 const Routers = () => {
   const [prueba, setPrueba] = useState(1);
@@ -93,10 +92,7 @@ const Routers = () => {
         <Route path="/ToastNotification" element={<ToastNotification />} />
         <Route path="/PageHeader" element={<PageHeader />} />
         <Route path="/FooterActions" element={<FooterActionExample />} />
-        <Route
-          path="/ProgresSinco"
-          element={<ProgressSinco time={3000} lote={5} />}
-        />
+        <Route path="/ProgresSinco" element={<ProgressSincoPrueba />} />
         <Route
           path="/CardRadio"
           element={
@@ -111,7 +107,6 @@ const Routers = () => {
                 heightPosition="top"
                 checked={prueba === 0}
                 color="secondary"
-                // states="disabled"
               />
               <CardRadio
                 onChange={(value) => setPrueba(value as number)}

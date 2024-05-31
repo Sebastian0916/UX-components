@@ -1,11 +1,15 @@
 import { Autocomplete, Stack, TextField, Typography } from "@mui/material";
-import React from "react";
 import HeaderComponents from "./headerComponents";
 
 const AutocompleteComponent = () => {
-
   return (
-    <Stack alignItems={"center"} ml={"240px"} justifyContent={"center"} mt={4} spacing={4}>
+    <Stack
+      alignItems={"center"}
+      ml={"240px"}
+      justifyContent={"center"}
+      mt={4}
+      spacing={4}
+    >
       <HeaderComponents title="Autocomplete" />
       <Stack gap={4} flexDirection={"row"}>
         <Stack gap={1.5}>
@@ -14,7 +18,6 @@ const AutocompleteComponent = () => {
           </Typography>
           <Autocomplete
             disablePortal
-            id="combo-box-demo"
             options={top100Films}
             sx={{ width: 420 }}
             renderInput={(params) => (
@@ -23,10 +26,11 @@ const AutocompleteComponent = () => {
           />
           <Autocomplete
             disablePortal
-            id="combo-box-demo"
             options={top100Films}
             sx={{ width: 420 }}
-            renderInput={(params) => <TextField {...params} label="Movie" />}
+            renderInput={(params) => (
+              <TextField {...params} label="Movie" fullWidth />
+            )}
           />
         </Stack>
         <Stack gap={1.5}>
