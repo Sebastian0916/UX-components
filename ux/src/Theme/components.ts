@@ -7,6 +7,7 @@ import {
   WarningRounded,
   ErrorRounded,
 } from "@mui/icons-material";
+import { transform } from "typescript";
 
 export const components: Components = {
   MuiSelect: {
@@ -530,8 +531,7 @@ export const components: Components = {
           paddingBlock: 14,
         },
         ".MuiFilledInput-input.MuiInputBase-inputSizeSmall": {
-          paddingTop: 16,
-          paddingBottom: 2,
+          padding: "0 4px !important",
         },
         ".MuiFilledInput-input": {
           paddingTop: 22,
@@ -558,6 +558,7 @@ export const components: Components = {
         },
         "& .MuiAutocomplete-endAdornment": {
           top: "calc(50% - 12px)",
+          transform: "none",
         },
         "&.MuiAutocomplete-root .MuiOutlinedInput-root.MuiInputBase-sizeSmall":
           {
@@ -583,6 +584,12 @@ export const components: Components = {
         fontStyle: "normal",
         fontWeight: 400,
         letterSpacing: "0.15px",
+      },
+      filled: {
+        "&.MuiInputLabel-filled.MuiInputLabel-sizeSmall:not(.MuiInputLabel-shrink)":
+          {
+            transform: "translate(12px,9px) scale(1)",
+          },
       },
       standard: {
         "&.MuiInputLabel-standard.MuiInputLabel-sizeSmall:not(.MuiInputLabel-shrink)":
@@ -775,6 +782,5 @@ export const components: Components = {
     defaultProps: {
       size: "small",
     },
-    styleOverrides: {},
   },
 };

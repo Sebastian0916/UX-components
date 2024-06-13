@@ -33,7 +33,6 @@ import { EmptyState } from "./EmptyState";
 import { ToastNotification } from "./ToastNotification";
 import { FooterActionExample } from "./FooterAction";
 import { PageHeader } from "./PageHeader";
-import Icons from "./Icons";
 import { CardRadio } from "@sinco/react";
 import { ProgressSincoPrueba } from "./ProgressSinco";
 
@@ -86,9 +85,7 @@ export const Componentes = () => {
       <Typography variant="body2" color={"text.secondary"}>
         Size Ilustración: small | medium | large
       </Typography>
-      <Stack flexDirection={"row"} alignItems={" center"} gap={8}>
-        <Icons iconName="sinco-access" size="large" />{" "}
-      </Stack>
+
       <ProgressSincoPrueba />
       <CardRadio
         onChange={function (value: string | number): void {
